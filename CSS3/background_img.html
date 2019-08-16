@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#rcorners1{
+				background: url(img/Img01.png);
+				background-repeat: no-repeat; /* 背景图片不重复 */
+				background-size: contain; /* contain 不会改变图片宽高比*/
+				background-size: 100% 100%; /* 这种赋值方法会导致图片适应容器宽高比 */
+				background-position-x: center;	/* 图片居中 */
+				background-position-y: center;	/* 图片居中 */
+				width: 300px;
+				height: 200px;
+				padding: 30px;
+				margin: 10px;
+				padding-left: 30px;
+			}
+			#rcorners2{
+				background-image: url(img/img01.png),url(img/snake.jpg);
+				background-position: left top,right bottom;
+				background-repeat: no-repeat,repeat;
+				background-size: contain;
+				padding: 10px;
+				width: 800px;
+				height: 300px;
+			}
+		</style>
+	</head>
+	<body>
+		<p id="rcorners1">背景</p>
+		<p id="rcorners2">背景</p>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>演示：jQuery年月日（生日）选择器</title>
+<link rel="stylesheet" type="text/css" href="../css/main.css" />
+<style>
+.demo{width:420px; margin:40px auto 0 auto; min-height:250px;}
+.demo p{line-height:42px; font-size:16px}
+</style>
+<script type="text/javascript" src="jquery.js"></script>
+
+</head>
+
+<body>
+
+<div id="main">
+
+   <div class="demo">
+   		<p>
+        初始化：<br/>
+   		<label>生日：</label>
+        <select id="sel_year"></select>年
+        <select id="sel_month"></select>月
+        <select id="sel_day"></select>日
+      	</p>
+        
+        <p>
+        默认值：<br/>
+   		<label>生日：</label>
+        <select class="sel_year" rel="2000"></select>年
+        <select class="sel_month" rel="2"></select>月
+        <select class="sel_day" rel="14"></select>日
+      	</p>
+        
+	</div>
+
+<script type="text/javascript" src="birthday.js"></script>
+<script>  
+$(function () {
+	$.ms_DatePicker({
+            YearSelector: ".sel_year",
+            MonthSelector: ".sel_month",
+            DaySelector: ".sel_day"
+    });
+	$.ms_DatePicker();
+}); 
+</script> 
+
+<p id="stat"><script type="text/javascript" src="/js/tongji.js"></script></p>
+</body>
+</html>

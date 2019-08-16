@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 60px;
+				height: 140px;
+				float: left;
+			}
+			#selectButton{
+				padding-left: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+		<select id="city" size="7" multiple="multiple">
+			<option value ="sh">上海</option>
+			<option value ="wh">武汉</option>
+			<option value ="sh">上海</option>
+			<option value ="sh">上海</option>
+			<option value ="sh">上海</option>
+			<option value ="sh">上海</option>
+		</select>
+		</div>
+		<div id="selectButton">
+			<a href="javascript:moveRightAll()">&gt;&gt;||</a><br />
+			<a href="javascript:moveLeft()">&lt;&lt;</a><br />
+			<a href="javascript:moveRight()">&gt;&gt;</a><br />
+			<a href="javascript:moveleftAll()">||&lt;&lt;</a>
+		</div>
+		
+		<div>
+		<select id="selectCity" size="7" multiple="multiple">
+		</select>
+		</div>
+		
+		<script type="text/javascript">
+			var city1 = document.getElementById("city");
+			var city2 = document.getElementById("selectCity");
+			function moveRightAll(){
+				for(var i=city1.options.length-1;i>=0;i--){
+					city2.options.add(city1.options[i]);
+				}
+			}
+			function moveRight(){
+				for(var i=city1.options.length-1;i>=0;i--){
+					if(city1.options[i].selected){
+					city2.options.add(city1.options[i]);
+					}
+				}
+			}
+			function moveleftAll(){
+				for(var i = city2.options.length-1;i>=0;i--){
+					city1.options.add(city2.options[i]);
+				}
+			}
+			function moveLeft(){
+				for(var i=city2.options.length-1;i>=0;i--){
+					if(city2.options[i].selected){
+					city1.options.add(city2.options[i]);
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

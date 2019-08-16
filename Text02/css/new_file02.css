@@ -1,0 +1,33 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+a:link{
+	text-decoration: none;
+	font-size: 14px;
+}
+body ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+body ul li{
+	float: left;
+	width: 50px;
+	text-align: center;
+}
+ol{
+	clear: none;
+	list-style-type: none;
+	list-style-image: url();
+	visibility: visible;
+	display: none;
+}
+h3{
+	width: 300px;
+	height: 300px;
+	padding-bottom: 30px;
+	border: 1px solid  red;
+	overflow: auto;
+}

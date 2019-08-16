@@ -1,0 +1,66 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.body{
+	background: url(../img/saltandiceWS.jpg) no-repeat center center scroll;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.div1{
+	background: url(../img/GOAT.jpg);
+	width: 900px; 
+	height: 800px; 
+	background-size: cover;
+	margin-left: 20%;
+	
+}
+.div2{
+	background-color: #fff; 
+	width: 700px; 
+	height: 800px; 
+	position: absolute;
+	margin-left: 100px;
+}
+
+.opacity{
+	opacity: 0.6;
+}
+
+.butt{
+	width: 80px;
+	height: 40px;
+	margin-left: 30px;
+	font-size: 19px;
+}
+
+.tableName{
+	position: absolute;
+	margin-top: 25%;
+	margin-left: 15%;
+	font-size: 18px;
+}
+tr{
+	width: 300px;
+	height: 50px;
+}
+#UserName{
+	width: 400px;
+	height: 50px;
+	font-size: 24px;
+}
+#dizhi{
+	height: 40px;
+	font-size: 18px;
+	margin-left: 20px;
+}
+#xueze{
+	font-size: 19px;
+	margin-left: 20px;
+}
+#aihao{
+	margin-left: 20px;
+}
+
+

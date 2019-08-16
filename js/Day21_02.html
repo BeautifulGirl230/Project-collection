@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="d1"></div>
+		<button onclick="myStopFunction()">停止</button>
+		<button onclick="funMethodl()" >有模式</button>
+		<button onclick="funMethod2()" >无模式</button>
+		
+		<script type="text/javascript">
+			window.onload = function f(){
+				alert(123);
+			}
+			
+			function funMethodl(){
+				window.showModalDialog("showModalDialog.html","123","dialogHeight:300px;dialogWidth:300px;center:yes;")
+			}
+			
+			var d=document.getElementById("d1").innerText = new Date().toString();
+			function chooseCallback(){
+				document.getElementById("d1").innerText = new Date().toString()
+			}
+			myVar = window.setInterval("chooseCallback()",1000);
+			
+			function myStopFunction(){
+				window.clearInterval(myVar)
+			}
+		</script>
+		
+	</body>
+</html>

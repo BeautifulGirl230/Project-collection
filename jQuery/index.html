@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script src="js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+		<title>显示与隐藏</title>
+		<style type="text/css">
+			#div{
+				width: 800px;
+				height: 500px;
+				display: none;
+			}
+		</style>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				// 点击显示
+				$(".hide").click(function(){
+					$("p").hide(1000);
+				});
+				//点击隐藏
+				$(".show").click(function(){
+					$("p").show(1000);
+				});
+				//点击显示和隐藏
+				$(".toggle").click(function(){
+					$("p").toggle("show");
+				});
+				//点击滑动显示
+				$(".hide").click(function(){
+					$("#div").slideDown("show");
+				});
+				//点击滑动隐藏
+				$(".show").click(function(){
+					$("#div").slideUp("hied");
+				});
+				//点击滑动显示点击滑动隐藏
+				$(".toggle").click(function(){
+					$("#div").slideToggle("toggle");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<button type="button" class="hide">隐藏文字&nbsp;&nbsp;显示图片</button>
+		<button type="button" class="show">显示文字&nbsp;&nbsp;隐藏图片</button>
+		<button type="button" class="toggle">隐藏&nbsp;&nbsp;显示</button>
+		<p>点击隐藏按钮我将会消失</p>
+		<p>我是另外一个小段落</p>
+		<div id="div"><img  src="img/Img.png"></div>
+	</body>
+</html>
