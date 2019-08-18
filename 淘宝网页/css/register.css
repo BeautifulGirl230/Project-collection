@@ -1,0 +1,48 @@
+#register_Img{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#register_table{
+	padding-top: 10px;
+	border-collapse: collapse;
+}
+#register_table td{
+	height: 35px;
+	border: 2px solid lightblue;
+}
+.register_td{
+	background-color: azure;
+	width: 220px;
+}
+.register_input{
+	width: 230px;
+	height: 22px;
+}
+.checkbox{
+	margin-left: 15px;
+	margin-right: 15px;
+}
+.register_aihao{
+	margin-left: 15px;
+	margin-right: 15px;
+}
+#register_DIV{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 8px;
+	font-size: 12px;
+}
+#textarea{
+	margin-bottom: 10px;
+	margin-left: 8px;
+}
+#register_form{
+	margin-bottom: 10px;
+	font-size: 15px;
+}
+#register_CZ{
+	height: 25px;
+}
+#register_TJ{
+	height: 25px;
+}

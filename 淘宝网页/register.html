@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册页面</title>
+		<link type="text/css" href="css/new_file.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+		<script src="js/register.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.js" type="text/javascript"></script>
+		<script src="js/birthday.js" type="text/javascript"></script>
+		<script>  
+		$(function () {
+			$.ms_DatePicker({
+		            YearSelector: ".sel_year",
+		            MonthSelector: ".sel_month",
+		            DaySelector: ".sel_day"
+		    });
+			$.ms_DatePicker();
+		}); 
+		</script> 
+	</head>
+	<body>
+		<div id="MaxDiv">
+			<img id="DaoImg" src="img/logo.gif">
+			<div id="DNKLEJ">
+				<ul class="ul01">
+					<li><img src="img/banner_1.gif"></li>
+					<li><img src="img/banner_2.gif"></li>
+					<li><img src="img/banner_3.gif"></li>
+					<li><img src="img/banner_4.gif"></li>
+					<li><img src="img/banner_5.gif"></li>
+					<li><img src="img/banner_6.gif"></li>
+				</ul>
+			</div>
+			<div class="DivText">
+				<a class="DivTextAA">您好，欢迎来淘宝！</a>
+				<a class="DivTextAA">[<a href="register.html">免费注册</a>]</a>
+				<a class="DivTextAA">[<a href="login.html">登录</a>]</a>
+				<a class="DivTextAA">阿里旺旺</a>
+				<a class="DivTextAA">支付宝</a>
+			</div>
+			<img src="img/table_1.gif">
+			<div class="TableFJ">
+				<table id="TDtd">
+					<tr>
+						<td>
+							<select class="SelectStu">
+								<option value="宝贝搜索">搜索宝贝</option>
+								<option value="宝贝搜索">搜索店鋪</option>
+								<option value="宝贝搜索">搜索掌柜</option>
+								<option value="宝贝搜索">搜索咨询</option>
+								<option value="宝贝搜索">搜索网页</option>
+							</select>
+							<input type="text" id="InpeSR" />
+						</td>
+						<td>
+							<select class="SelectStu2">
+								<option value="所以分类">所以分类</option>
+								<option value="所以分类">玩具/动漫/模型/卡通</option>
+								<option value="所以分类">购物优惠券/门票/美容健身卡</option>
+								<option value="所以分类">鲜花速递/蛋糕配送/园艺花艺</option>
+								<option value="所以分类">网点服务/物流/个性/家政/婚庆</option>
+							</select>
+							<input type="button" value="搜索" id="InputSS" />
+						</td>
+						<td class="Span">[高级搜索]</td>
+						<td class="Span">[使用帮助]</td>
+					</tr>
+				</table>
+				<table id="TDtd">
+					<tr>
+						<td class="Span3">热门搜索：</td>
+						<td class="Span2">T恤</td>
+						<td class="Span2">女鞋</td>
+						<td class="Span2">手机</td>
+						<td class="Span2">比基尼</td>
+						<td class="Span2">减肥</td>
+						<td class="Span2">七分裤</td>
+						<td class="Span2">娃娃衫</td>
+						<td class="Span2">特价机票</td>
+						<td class="Span2">连衣裙</td>
+						<td class="Span2">Q币</td>
+						<td class="Span2">美白防晒</td>
+						<td class="Span2">热销品</td>
+						<td class="Span2">二手房</td>
+					</tr>
+				</table>
+			</div>
+		<form name="register" action="index.html" method="get" id="register_form" onsubmit="return stuRegister()">
+		<table id="register_Img" border="0">
+			<tr>
+				<td><img src="img/image/logo.gif" ><img src="img/image/reg.gif" ></td>
+			</tr>
+			<table width="100%" id="register_table">
+				<tr>
+					<td class="register_td" align="right">姓名：</td>
+					<td><input type="text" id="name" class="register_input" value="" /></td>
+				</tr>
+				<tr>
+					<td class="register_td" align="right">姓氏：</td>
+					<td><input type="text" id="stuName" class="register_input" value="" /></td>
+				</tr>
+				<tr>
+					<td class="register_td" align="right">登录名：</td>
+					<td><input type="text" id="userName" class="register_input" value="" />（可包含 a-z、0-9 和下划线）</td>
+				</tr>
+				<tr>
+					<td class="register_td" align="right">密码：</td>
+					<td><input type="password" id="password" class="register_input" value="" />（至少包含 6 个字符）</td>
+				</tr>
+				<tr>
+					<td class="register_td" align="right">再次输入密码：</td>
+					<td><input type="password" id="password2" class="register_input" value="" /></td>
+				</tr>
+				<tr>
+					<td class="register_td" align="right">电子邮箱：</td>
+					<td><input type="text" id="emali" class="register_input" value="" />（必须包含 @ 字符）</td>
+				</tr>
+				<tr>
+					<td class="register_td" align="right">性别：</td>
+					<td>
+						<input type="radio" class="checkbox" name="1" id="register_Boy" value="男" checked="checked" /><img src="img/image/Male.gif" >男
+						<input type="radio" class="checkbox" name="1" id="register_Girl" value="女" /><img src="img/image/Female.gif" >女
+					</td>
+				</tr>
+				<tr>
+					<td class="register_td" align="right">爱好：</td>
+					<td>
+						<input type="checkbox" name="" class="register_aihao" />运动
+						<input type="checkbox" name="" class="register_aihao" />聊天
+						<input type="checkbox" name="" class="register_aihao" />玩游戏
+					</td>
+				</tr>
+				<tr>
+					<td class="register_td" align="right">出生日期：</td>
+					<td>
+						<p>
+						<select id="sel_year"></select>年
+						<select id="sel_month"></select>月
+						<select id="sel_day"></select>日
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="register_td" align="right"><input type="reset" name="" id="register_CZ" value="&nbsp;&nbsp;重&nbsp;&nbsp;&nbsp;填&nbsp;&nbsp;" /></td>
+					<td>
+						<input type="submit" id="register_TJ" value="&nbsp;&nbsp;同意以下服务条款,提交注册信息&nbsp;&nbsp;" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div id="register_DIV">
+							<img src="img/image/read.gif" ><b>阅读淘宝网服务协议</b>
+						</div>
+						<textarea rows="6" cols="80" id="textarea">
+欢迎阅读服务条款协议，本协议阐述之条款和条件适用于您使用Taobao.com网站的各种工具和服务。
+本服务协议双方为淘宝与淘宝网用户，本服务协议具有合同效力。 
+淘宝的权利和义务
+1.淘宝有义务在现有技术上维护整个网上交易平台的正常运行，并努力提升和改进技术，使用户网上交易活动的顺利。 
+2.对用户在注册使用淘宝网上交易平台中所遇到的与交易或注册有关的问题及反映的情况，淘宝应及时作出回复。 
+3.对于在淘宝网网上交易平台上的不当行为或其它任何淘宝认为应当终止服务的情况，淘宝有权随时作出删除相关信息、终止服务提
+
+供等处理，而无须征得用户的同意。 
+4.因网上交易平台的特殊性，淘宝没有义务对所有用户的注册资料、所有的交易行为以及与交易有关的其他事项进行事先审查。
+						</textarea>
+					</td>
+				</tr>
+			</table>
+		</table>
+		</form>
+		<hr >
+		<div id="WEIBU">
+			<a href="#" class="WEIBU2">关于淘宝</a>
+			<a href="#" class="WEIBU2">广告服务</a>
+			<a href="#" class="WEIBU2">合作伙伴</a>
+			<a href="#" class="WEIBU2">客户中心</a>
+			<a href="#" class="WEIBU2">诚征英才</a>
+			<a href="#" class="WEIBU2">联系我们</a>
+			<a href="#" class="WEIBU2">网站地图</a>
+			<a href="#" class="WEIBU2">热门品牌</a>
+			<a href="#" class="WEIBU2">版权说明</a><br />
+			全球阿里巴巴：<a href="#" class="WEIBU2">中国站</a>
+			<a href="#" class="WEIBU2">国际站</a>
+			<a href="#" class="WEIBU2">日文站</a>
+			<a href="#" class="WEIBU2">淘宝站</a>
+			<a href="#" class="WEIBU2">支付宝</a>
+			<a href="#" class="WEIBU2">中国雅虎</a>
+			<a href="#" class="WEIBU2">口碑网</a>
+			<a href="#" class="WEIBU2">阿里软件</a>
+			<a href="#" class="WEIBU2">淘宝推广联盟</a><br />
+			<h5 class="WEIBU2">Copyright 2003-2007, 版权所有 TAOBAO.COM</h5>
+			<h5><a href="#" class="WEIBU2">ICP证：浙B2-20050291</a></h5>
+			<h5 class="WEIBU2">广告经营许可证号：3301061000468</h5>
+		</div>
+	</div>
+	</body>
+</html>

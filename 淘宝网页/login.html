@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>登录页面</title>
+		<link type="text/css" href="css/new_file.css" rel="stylesheet" />
+		<link type="text/css" href="css/login.css" rel="stylesheet" />
+		<script src="js/login.js" type="text/javascript" charset="utf-8"></script>
+			
+		
+	</head>
+	<body>
+		<div id="MaxDiv">
+			<img id="DaoImg" src="img/logo.gif">
+			<div id="DNKLEJ">
+				<ul class="ul01">
+					<li><img src="img/banner_1.gif"></li>
+					<li><img src="img/banner_2.gif"></li>
+					<li><img src="img/banner_3.gif"></li>
+					<li><img src="img/banner_4.gif"></li>
+					<li><img src="img/banner_5.gif"></li>
+					<li><img src="img/banner_6.gif"></li>
+				</ul>
+			</div>
+			<div class="DivText">
+				<a class="DivTextAA">您好，欢迎来淘宝！</a>
+				<a class="DivTextAA">[<a href="register.html">免费注册</a>]</a>
+				<a class="DivTextAA">[<a href="login.html">登录</a>]</a>
+				<a class="DivTextAA">阿里旺旺</a>
+				<a class="DivTextAA">支付宝</a>
+			</div>
+			<img src="img/table_1.gif">
+			<div class="TableFJ">
+				<table id="TDtd">
+					<tr>
+						<td>
+							<select class="SelectStu">
+								<option value="宝贝搜索">搜索宝贝</option>
+								<option value="宝贝搜索">搜索店鋪</option>
+								<option value="宝贝搜索">搜索掌柜</option>
+								<option value="宝贝搜索">搜索咨询</option>
+								<option value="宝贝搜索">搜索网页</option>
+							</select>
+							<input type="text" id="InpeSR" />
+						</td>
+						<td>
+							<select class="SelectStu2">
+								<option value="所以分类">所以分类</option>
+								<option value="所以分类">玩具/动漫/模型/卡通</option>
+								<option value="所以分类">购物优惠券/门票/美容健身卡</option>
+								<option value="所以分类">鲜花速递/蛋糕配送/园艺花艺</option>
+								<option value="所以分类">网点服务/物流/个性/家政/婚庆</option>
+							</select>
+							<input type="button" value="搜索" id="InputSS" />
+						</td>
+						<td class="Span">[高级搜索]</td>
+						<td class="Span">[使用帮助]</td>
+					</tr>
+				</table>
+				<table id="TDtd">
+					<tr>
+						<td class="Span3">热门搜索：</td>
+						<td class="Span2">T恤</td>
+						<td class="Span2">女鞋</td>
+						<td class="Span2">手机</td>
+						<td class="Span2">比基尼</td>
+						<td class="Span2">减肥</td>
+						<td class="Span2">七分裤</td>
+						<td class="Span2">娃娃衫</td>
+						<td class="Span2">特价机票</td>
+						<td class="Span2">连衣裙</td>
+						<td class="Span2">Q币</td>
+						<td class="Span2">美白防晒</td>
+						<td class="Span2">热销品</td>
+						<td class="Span2">二手房</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<div id="ZHONG">
+			<table border="0">
+				<tr>
+					<td>
+						<form name="userlogin" method="get" action="">
+						<table border="0">
+							<tr>
+								<td colspan="2"><img src="img/images/title_login_2.gif" id="Img1"></td>
+							</tr>
+							<tr>
+								<td class="Login_td Login_td_name">会员名：<input type="text" name="sname" id="sname" size="15"/>（可包含 a-z、0-9 和下划线）</td>
+							</tr>
+							<tr><td id="error_box" class="Login_td"></td></tr>
+							<tr>
+								<td class="Login_td">密&nbsp;&nbsp;&nbsp;码：<input type="password" name="password" id="password" size="15"/>（至少包含 6 个字符）</td>
+							</tr>
+							<tr><td id="error_box1" class="Login_td"></td></tr>
+							<tr>
+								<td>
+									<div id="Login_but">
+										<input type="button" name="" id="Login" class="Login_but" onclick="sNameCheck()" value="登&nbsp;&nbsp;录" />
+										<input type="reset" name="" id="Zero" class="Login_but" value="重&nbsp;&nbsp;填" />
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td><img src="img/images/register_leftfoot.gif" id="Login_Img"></td>
+							</tr>
+						</table>
+					<td>
+						<img src="img/images/register_right.gif" id="Login_Img02">
+					</td>
+					</td>
+				</tr>
+			</table>
+			</form>
+			<hr>
+		</div>
+
+		<div id="WEIBU">
+			<a href="#" class="WEIBU2">关于淘宝</a>
+			<a href="#" class="WEIBU2">广告服务</a>
+			<a href="#" class="WEIBU2">合作伙伴</a>
+			<a href="#" class="WEIBU2">客户中心</a>
+			<a href="#" class="WEIBU2">诚征英才</a>
+			<a href="#" class="WEIBU2">联系我们</a>
+			<a href="#" class="WEIBU2">网站地图</a>
+			<a href="#" class="WEIBU2">热门品牌</a>
+			<a href="#" class="WEIBU2">版权说明</a><br />
+			全球阿里巴巴：<a href="#" class="WEIBU2">中国站</a>
+			<a href="#" class="WEIBU2">国际站</a>
+			<a href="#" class="WEIBU2">日文站</a>
+			<a href="#" class="WEIBU2">淘宝站</a>
+			<a href="#" class="WEIBU2">支付宝</a>
+			<a href="#" class="WEIBU2">中国雅虎</a>
+			<a href="#" class="WEIBU2">口碑网</a>
+			<a href="#" class="WEIBU2">阿里软件</a>
+			<a href="#" class="WEIBU2">淘宝推广联盟</a><br />
+			<h5 class="WEIBU2">Copyright 2003-2007, 版权所有 TAOBAO.COM</h5>
+			<h5><a href="#" class="WEIBU2">ICP证：浙B2-20050291</a></h5>
+			<h5 class="WEIBU2">广告经营许可证号：3301061000468</h5>
+		</div>
+	</body>
+</html>

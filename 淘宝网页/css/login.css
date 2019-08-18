@@ -1,0 +1,32 @@
+#ZHONG{
+	width: 950px;
+	margin: 0 auto;
+}
+#Img1{
+	padding-top: 10px;
+}
+.Login_td{
+	padding-top: 10px;
+	padding-left: 70px;
+	font-size: 14px;
+}
+.Login_td_name{
+	padding-top: 40px;
+}
+.Login_but{
+	width: 70px;
+	height: 30px;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+#Login_but{
+	margin: 0 auto;
+	text-align: center;
+}
+#Login_Img{
+	padding-top: 40px;
+}
+#Login_Img02{
+	margin-top: 10px;
+	height: 370px;
+}
