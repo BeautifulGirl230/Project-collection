@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>v-for迭代数字</title>
+		<script src="../lib/vue-2.4.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<p v-for="(count,i) in 10">索引：{{i}}-----{{count}}</p>
+		</div>
+		
+		<script type="text/javascript">
+			var vm = new Vue({
+				el:'#app',
+				data:{},
+				methods:{}
+			})
+		</script>
+	</body>
+</html>

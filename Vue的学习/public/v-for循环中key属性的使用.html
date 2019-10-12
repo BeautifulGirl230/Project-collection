@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>v-for循环中key属性的使用</title>
+		<script src="../lib/vue-2.4.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<label>ID:
+				<input type="text" name="ID" id="text1" v-model="id" />
+			</label>
+			<label>Name:
+				<input type="text" name="Name" id="text1" v-model="name" />
+			</label>
+			<label>
+				<input type="button" name="button" id="btn" value="头部添加" @click="add" />
+			</label>
+			
+			<!-- v-for 循环的时候，key 属性只能使用 number 获取 String -->
+			<!-- key 在使用的时候，必须使用 v-bind 属性单向绑定，指定 key 的值 -->
+			<!-- 在组件中，使用 v-for 循环的时候，或者在一些特殊情况中，如果 v-for 有问题，必须在使用 v-for 的同时，指定唯一的字符串/数组类型 -->
+			<p v-for="item in list" :key="item.id">
+				<input type="checkbox" name="checkbox" id="checkbox" />
+				{{item.id}}------Name:{{item.name}}
+			</p>
+		</div>
+		
+		<script type="text/javascript">
+			var vm = new Vue({
+				el:'#app',
+				data:{
+					id:'',
+					name:'',
+					list:[
+						{id:1,name:'A'},
+						{id:2,name:'B'},
+						{id:3,name:'C'},
+						{id:4,name:'D'}
+					]
+					
+				},
+				methods:{
+					add(){
+						this.list.unshift({id:this.id,name:this.name})
+					},
+				}
+			})
+		</script>
+	</body>
+</html>

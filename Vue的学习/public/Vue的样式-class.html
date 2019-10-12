@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Vue的样式-class</title>
+		<script src="../lib/vue-2.4.0.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.red{
+				color: red;
+			}
+			.thin{
+				font-weight: 200;
+			}
+			.italic{
+				font-style: italic;
+			}
+			.active{
+				letter-spacing: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<!-- 常用的样式 -->
+			<h1 class="red thin">在Vue中使用样式</h1><br />
+			
+			<!-- 第一种方式：直接传递一个数组  注意：这里的class要使用 v-bind做数组绑定 -->
+			<h1 :class="['red','italic']">在Vue中使用样式</h1><br />
+			
+			<!-- 在数组中使用三元表达式 -->
+			<h1 :class="['red','italic',flag?'active':'']">在Vue中使用样式</h1><br />
+			
+			<!-- 在为class使用 v-bind 绑定对象的时候，对象的属性是类名，有于对象的属性可带引号，也可不带引号，属性值是一个标识符 -->
+			<h1 :class="{red:true, thin:true,italic:false,active:false}">在Vue中使用样式</h1><br />
+			
+			<!-- 可以定义一个 classObj 然后在引用 classObj 里的属性 -->
+			<h1 :class="classObj">在Vue中使用样式</h1><br />
+		</div>
+		
+		<script type="text/javascript">
+			var vm = new Vue({
+				el:'#app',
+				data:{
+					flag:true,
+					classObj:{red:false, thin:true,italic:false,active:true}
+				},
+				methods:{}
+			})
+		</script>
+	</body>
+</html>

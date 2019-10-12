@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Vue的样式-style</title>
+		<script src="../lib/vue-2.4.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<!-- 对象就是无序键值对的集合 如果属性中包含`-`就必须要加单引号 -->
+			<!-- 直接在 style 中写样式 -->
+			<h1 :style="{color:'red','font-weight':200}"}>Vue的样式-style</h1>
+			
+			<!-- 可以定义一个 classObj 然后在引用 classObj 里的属性 -->
+			<h1 :style="styleObj">Vue的样式-style</h1>
+			
+			<!-- 用数组的形式将多个style放入其中 -->
+			<h1 :style="[styleObj,styleObj2]">Vue的样式-style</h1>
+		</div>
+		
+		<script type="text/javascript">
+			var vm = new Vue({
+				el:'#app',
+				data:{
+					styleObj:{
+						color:'red',
+						'font-weight':200
+						},
+					styleObj2{
+						'font-style': 'italic',
+					}
+				},
+			})
+		</script>
+	</body>
+</html>

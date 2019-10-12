@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>v-model实现简易计算器</title>
+		<script src="../lib/vue-2.4.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" name="text" id="text" v-model="n1" />
+			<select v-model="opt">
+				<option value ="+">+</option>
+				<option value ="-">-</option>
+				<option value ="*">*</option>
+				<option value ="/">/</option>
+			</select>
+			<input type="text" name="text2" id="text" v-model="n2" />
+			<input type="button" name="button" id="btn" value="=" @click="calc" />
+			<input type="text" name="text3" id="text" v-model="resule" />
+			
+		</div>
+		
+		<script type="text/javascript">
+			var vm = new Vue({
+				el:'#app',
+				data:{
+					n1:0,
+					n2:0,
+					resule:0,
+					opt:'+'
+				},
+				methods:{
+					calc(){	//计算器方法
+						switch (this.opt){
+							case '+':
+							this.resule = parseInt(this.n1) + parseInt(this.n2)
+							break;
+							case '-':
+							this.resule = parseInt(this.n1) - parseInt(this.n2)
+							break;
+							case '*':
+							this.resule = parseInt(this.n1) * parseInt(this.n2)
+							break;
+							case '/':
+							this.resule = parseInt(this.n1) / parseInt(this.n2)
+							break;
+						}
+							// 第二种实现方法:eval()解析数据 不安全 消耗性能 不实用
+							// var codeStr = 'parseInt(this.n1)' + this.opt  + 'parseInt(this.n2)'
+							// this.resule =  eval(codeStr)  
+					},
+				},
+			})
+		</script>
+	</body>
+</html>
