@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body{
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				font-family: 'icomoon';
+			}
+			body ul{
+				list-style: none;
+				padding: 0px;
+			}
+			@font-face {
+			  font-family: 'icomoon';
+			  src:  url('fonts/icomoon.eot?fcb9nu');
+			  src:  url('fonts/icomoon.eot?fcb9nu#iefix') format('embedded-opentype'),
+			    url('fonts/icomoon.ttf?fcb9nu') format('truetype'),
+			    url('fonts/icomoon.woff?fcb9nu') format('woff'),
+			    url('fonts/icomoon.svg?fcb9nu#icomoon') format('svg');
+			  font-weight: normal;
+			  font-style: normal;
+			  font-display: block;
+			}
+			.up {
+				width: 100%;
+				height: 160px;
+				background-color: #333;
+				margin:0;
+				padding:0;
+				overflow:hidden
+			}
+			.up li{
+				color: white;
+				
+			}
+			.top a{
+				color: white;
+				text-decoration: none;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			.top a:hover{
+				color: red;
+			}
+			.top span:hover{
+				color: red;
+			}
+			.top{
+				margin-left: -50px;
+			}
+			.fl{
+				float: left;
+			}
+			.up_top{
+				width: 1200px;
+				height: 40px;
+				right: -46%;
+				margin-left: 70%;
+			}
+			.up_top a{
+				font-size: 15px;
+			}
+			.up_top span{
+				position: relative;
+				top: 3px;
+			}
+			.icon{
+				font-family: 'icomoon';
+				font-size: 17px;
+				color: darkgray;
+			}
+			.login{
+				position: relative;
+				width: 1200px;
+				height: 120px;
+				left: 120px;
+				top: -40px;
+				
+			}
+			.roll{
+				width: 50px;
+				height: 200px;
+				z-index: 99999;
+				position: fixed;
+				top: 35%;
+				right:0px;
+				transition: all 0.6s;
+			}
+			.roll a{
+				text-decoration: none;
+				color: #000000;
+			}
+			#Title h1{
+				position: absolute;
+				color: #00BBBB;
+				left: 42%;
+				top: 40px;
+				font-family: "楷体";
+				text-shadow: 5px 5px 5px #FF0000;
+				background: -webkit-linear-gradient(red,blue);
+				background: -moz-linear-gradient(yellow,blue);
+				background: linear-gradient(red,blue);
+			}
+			.roll li{
+				width: 50px;
+				height: 50px;
+				font-size: 26px;
+				text-align: center;
+				line-height: 50px;
+				background-color: #CCCCCC;
+				border: 1px solid white;
+				padding-left:-40px;
+			
+			}
+			.roll li:hover{
+				background-color: red;
+				color: white;
+			}
+			/* ----------------------------------------页眉---------------------------------- */
+			.content{
+				width: 1200px;
+				height:800px;
+				margin: 0 auto;
+			
+			
+			
+			
+			
+			/* ------------------------------------------页脚----------------------------------- */
+		</style>
+		
+	</head>
+	<body>
+		<div class="up">
+			<div id="Title">
+				<h1>管理员页面</h3>
+			</div>
+			<div class="up_top">
+				<ul>
+					<li class="fl top"><a href="login.jsp">登录</a>|<a href="register.jsp">注册</a>|<a href="#" style="color: red;">退出管理</a></li>
+				</ul>
+			</div>
+			<div class="login">
+				<div class="login_img fl">
+				<img  src="img/goe_logo.png" />
+				</div>
+			</div>
+			
+		</div>
+		<div class="roll">
+			<ul>
+				<a href="index.jsp"><li></li></a>
+				<a href="index.jsp"><li></li></a>
+				<a href="index.jsp"><li></li></a>
+				<a href="#"><li id="top"></li></a>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			 $(function(){
+			  $("#top").click(function() {
+			    $("html,body").animate({scrollTop:0}, 500);
+			  }); 
+			  });
+		</script>
+		<!-- ----------------------------------------------------页眉--------------------------------------------- -->
+		<div class="content">
+			
+			<div id="menu-wrap_div">
+			<nav class="menu-wrap">
+				<div class="menu">
+					<ul>
+						<li>
+							<a id="shouye" onclick="showAndHidden();">
+								<i class="fa fa-home fa-lg"></i>
+								<span class="nav-text">首页</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="fa fa-user fa-lg"></i>
+								<span class="nav-text">登录</span>
+							</a>
+						</li>
+						<li>
+							<a href=" ">
+								<i class="fa fa-envelope-o fa-lg"></i>
+								<span class="nav-text">联系</span>
+							</a>
+						</li>
+						<li>
+							<a href=" ">
+								<i class="fa fa-heart-o fa-lg"></i>
+								<span class="nav-text">收藏</span>
+							</a>
+						</li>
+						</li>
+						<li class="darkerli">
+							<a href=" ">
+								<i class="fa fa-shopping-cart"></i>
+								<span class="nav-text">购物</span>
+							</a>
+						</li>
+						<li class="darkerli">
+							<a href=" ">
+								<i class="fa fa-align-left fa-lg"></i>
+								<span class="nav-text">杂志
+								</span>
+							</a>
+						</li>
+						<li class="darkerli">
+							<a href=" ">
+								<i class="fa fa-glass fa-lg"></i>
+								<span class="nav-text">生活
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href=" ">
+								<i class="fa fa-question-circle fa-lg"></i>
+								<span class="nav-text">帮助</span>
+							</a>
+						</li>
+						<li>
+							<a href=" ">
+								<i class="fa fa-lightbulb-o fa-lg"></i>
+								<span class="nav-text">博客</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				</nav>
+				
+				<div class="DIV01 FE" style="background-color: #00BBBB;"></div>
+				<div class="DIV02 FE" style="background-color: #333333;"></div>
+				<div class="DIV03 FE" style="background-color: #A9A9A9;"></div>
+				<div class="DIV04 FE" style="background-color: #FFF0F5;"></div>
+				<div class="DIV05 FE" style="background-color: #F08080;"></div>
+				<div class="DIV06 FE" style="background-color: #FF0000;"></div>
+				<div class="DIV07 FE" style="background-color: #FFFAF0;"></div>
+			</div>
+			
+			<script type="text/javascript">
+				document.getElementById("DIV01").style.display="none";
+				document.getElementById("DIV02").style.display="none";
+				document.getElementById("DIV03").style.display="none";
+				document.getElementById("DIV04").style.display="none";
+				document.getElementById("DIV05").style.display="none";
+				document.getElementById("DIV06").style.display="none";
+				document.getElementById("DIV07").style.display="none";
+			</script>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</div>
+
+
+		<!-- ----------------------------------------------------------------------页脚--------------------- -->
+		<style type="text/css">
+			.footer{
+				width: 1200px;
+				height: 350px;
+				margin: 0 auto;
+			}
+			.footer_Label{
+				width: 1200px;
+				height: 330px;
+				margin: 0 auto;
+			}
+			.label_1{
+				margin-top: 40px;
+				width: 200px;
+				height: 80px;
+				border: 1px solid #A9A9A9;
+			}
+			.label{
+				margin-left: 40px;
+			}
+			 .label_1 .icon{
+				width: 55px;
+				height: 80px;
+				font-size: 34px;
+				text-align: center;
+				line-height: 80px;
+				color: black;
+			}
+			.label_1 p{
+				
+			}
+			.label_1 a{
+				font-size: 12px;
+			}
+			.introduce{
+				width: 200px;
+			}
+			.introduce ul{
+				margin-top: 40px;
+			}
+			.introduce a{
+				text-decoration: none;
+				color: #333;
+				font-size: 14px;
+				line-height: 30px;
+			}
+			.introduce a:hover{
+				color: red;
+			}
+			.footer_bottom{
+				width: 100%;
+				height: 100px;
+				background-color: #000000;
+			}
+			.footer_bottom_a{
+				text-align: center;
+				color: white;
+				line-height: 100px;
+			}
+			.footer_bottom_a a{
+				text-decoration: none;
+				color: white;
+			}
+		</style>
+		<div style="clear:both;margin-top: 50px;">
+		<hr />
+		<div class="footer">
+			<div class="footer_Label">
+				<div class="fl">
+				<div class="label_1 ">
+					<div class="icon fl"></div>
+					<p>正品保证</p>
+					<a>正品真货,质量有保障</a>
+				</div>
+				<div class="introduce">
+				<ul>
+					<li>
+						<p>售后服务</p>
+						<hr />
+					</li>
+					<li><a href="#" >退换货说明</a></li>
+					<li><a href="#" >投诉建议</a></li>
+				</ul>
+				</div>
+				</div>
+				
+				
+				<div class="fl label">
+				<div class="label_1">
+					<div class="icon fl"></div>
+					<p>闪电发货</p>
+					<a>急速物流，急速送达</a>
+				</div>
+				<div class="introduce">
+				<ul>
+					<li>
+						<p>关于Vision</p>
+						<hr />
+					</li>
+					<li><a href="#" >公司简介</a></li>
+					<li><a href="#" >联系客服</a></li>
+					<li><a href="#" >免责申明</a></li>
+				</ul>
+				</div>
+				</div>
+				
+				<div class="fl label">
+				<div class="label_1">
+					<div class="icon fl"></div>
+					<p>优惠不断</p>
+					<a>天天低价畅选无忧</a>
+				</div>
+				<div class="introduce">
+				<ul>
+					<li>
+						<p>新手指南</p>
+						<hr />
+					</li>
+					<li><a href="#" >购物流程</a></li>
+					<li><a href="#" >会员特权</a></li>
+					<li><a href="#" >常见问题</a></li>
+					<li><a href="#" >Vision返卷说明</a></li>
+				</ul>
+				</div>
+				</div>
+				
+				<div class="fl label">
+				<div class="label_1">
+					<div class="icon fl"></div>
+					<p>售后无忧</p>
+					<a>30天随心退换货服务</a>
+				</div>
+				<div class="introduce">
+				<ul>
+					<li>
+						<p>配镜指南</p>
+						<hr />
+					</li>
+					<li><a href="#" >读懂验光单</a></li>
+					<li><a href="#" >眼镜学堂</a></li>
+					<li><a href="#" >配镜流程</a></li>
+				</ul>
+				</div>
+				</div>
+				
+				<div class="fl label">
+				<div class="label_1">
+					<div class="icon fl"></div>
+					<p>门店体验</p>
+					<a>多家体验门店为您贴心服务</a>
+				</div>
+				<div class="introduce">
+				<ul>
+					<li>
+						<p>支付与配送</p>
+						<hr />
+					</li>
+					<li><a href="#" >支付方式</a></li>
+					<li><a href="#" >配送时效</a></li>
+				</ul>
+				</div>
+				</div>				
+			</div>
+		</div>
+		<div class="footer_bottom">
+			<div class="footer_bottom_a">
+				<p>
+				Copyright © 2019 某科技公司 All Rights Reserved.<a href="#">粤ICP备15082294号-1</a>
+				</p>
+			</div>
+			
+			
+		</div>
+		</div>
+		
+	</body>
+</html>
