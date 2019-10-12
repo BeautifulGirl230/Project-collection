@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="../lib/vue-2.4.0.js" type="text/javascript" charset="utf-8"></script>
+		<title>Vue的基本代码</title>
+	</head>
+	<body>
+		<div id="app">
+			<p>{{ msg }}</p>
+		</div>
+		<!-- built files will be auto injected -->
+		<script>
+			var vm = new Vue({
+				el:'#app',
+				data:{
+					msg:'Vue的基本代码'
+				}
+			})
+		</script>
+	</body>
+</html>
