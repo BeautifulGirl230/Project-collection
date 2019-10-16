@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue-resouce改造品牌列表</title>
+		<script src="../lib/vue-2.4.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../lib/vue-resource-1.3.4.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../lib/bootstrap-3.3.7.css"/>
+	</head>
+	<body>
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">添加</h3>
+			</div>
+			<div class="panel-body form-inline">
+				<label>
+					Name:
+					<input type="text" v-model="name" />
+				</label>
+				<input type="button" value="添加" @click="add" class="btn btn-primary" />
+			</div>
+		</div>
+		<div id="app">
+			<table class="table table-hover table-bordered table-striped">
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Name</th>
+						<th>Ctime</th>
+						<th>Operation</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr v-for="item in list" :key="item.id">
+						<td>{{ item.id }}</td>
+						<td>{{ item.name }}</td>
+						<td>{{ item.ctime }}</td>
+						<td>
+							<a href="" @click.prevent="del(item.id)">Delete</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<script type="text/javascript">
+			 //设置根URL
+			//如果我们通过全局配置了请求的数据接口根域名，则在每次单独泛起http请求的时候，请求的url的路径，应该以相对路径开头，即开头不能带有/。
+			Vue.http.options.root = 'http://www.liulongbin.top:3005';
+			//定义全局启用 emulateJSON 选项
+			Vue.http.options.emulateJSON = true;
+			var vm = new Vue({
+				el:'#app',
+				data:{
+					name:'',
+					list:[
+						{ id:1, Name:'宝马',Ctime:new Date() },
+						{ id:2, Name:'奔驰',Ctime:new Date() }
+					]
+				},
+				methods:{
+					add(){
+						this.$http.post('api/addproduct',{name:this.name}/*,{emulateJSON:true}*/).then(function(result){
+							var result = result.body
+							if(result.status == 0 && this.name != ''){
+								this.getAllList()
+								this.name = ''
+							}else{
+								alert('添加失败！')
+							}
+							
+						})
+					},
+					getAllList(){
+						this.$http.get('api/getprodlist').then(function(result){
+							var result = result.body
+							if (result.status == 0) {
+								this.list = result.message
+							} else{
+								alert('获取数据失败')
+							}
+						})
+					},
+					del(id){
+						this.$http.get('api/delproduct/' + id).then(result => {
+							if(result.body.status == 0){
+								this.getAllList()
+							}else{
+								alert('删除失败！')
+							}
+						})
+					}
+				},
+				created(){
+					this.getAllList()
+				}
+			})
+		</script>
+	</body>
+</html>
