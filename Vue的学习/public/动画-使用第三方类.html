@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>动画-使用第三方类</title>
+		<script src="../lib/vue-2.4.0.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../lib/animate.css"/>
+	</head>
+	<body>
+		<div id="app">
+			<input type="button" value="点击" @click="folet=!folet" /><br />
+			
+			<transition 
+			enter-active-class="bounceIn" 
+			leave-active-class="bounceOut" 
+			:duration="{enter:200, leave:400}">
+				<h3 v-if="folet" class="animated">这是一个h3</h3>
+				
+			</transition>
+			
+			<transition 
+			enter-active-class="bounceIn" 
+			leave-active-class="bounceOut" 
+			:duration="{enter:200, leave:400}">
+				<h3 v-if="folet2" class="animated">这是一个h3</h3>
+				
+			</transition>
+		</div>
+		
+		<script type="text/javascript">
+			document.getElementsByClassName(this.folet2 =! this.folet2)
+			var vm = new Vue({
+				el:'#app',
+				data:{
+					folet:true,
+					folet2:true
+				},
+				methods:{
+					toggle(){
+						this.folet =! this.folet
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

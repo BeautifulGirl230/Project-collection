@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>组件中的data和methods</title>
+		<script src="../lib/vue-2.4.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<comp></comp>
+		</div>
+		
+		<script type="text/javascript">
+			// 1 组件可以有自己的data数据
+			// 2 组件的data必须是一个方法，并且方法必须返回一个对象
+			// 3 组件中的data数据使用方法和实例中的data使用方法是一样的
+			Vue.component('comp',{
+				template:'<h1>This s comp ------{{ msg }}</h1>',
+				data:function(){
+					return{
+						msg:'这是组件中的data定义的数据'
+					}
+				}
+			})
+			var vm = new Vue({
+				el:'#app',
+				data:{},
+				methods:{}
+			})
+		</script>
+	</body>
+</html>

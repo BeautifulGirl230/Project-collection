@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>31.组件-why-componets'-data-must-be-a-function</title>
+		<script src="../lib/vue-2.4.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<counter></counter>
+			<counter></counter>
+			<counter></counter>
+		</div>
+		<template id="temp">
+			<div>
+				<input type="button" value="点击" @click="increment" />
+				<h3>{{ count }}</h3>
+			</div>
+		</template>
+		<script type="text/javascript">
+			//计数组件
+			// var dataObj = { count:0 },
+			Vue.component('counter',{
+				template:'#temp',
+				data:function(){
+					return{ count:0 }
+				},
+				methods:{
+					increment(){
+						this.count++
+					}
+				}
+			})
+			var vm = new Vue({
+				el:'#app',
+				data:{},
+				methods:{}
+			})
+		</script>
+	</body>
+</html>

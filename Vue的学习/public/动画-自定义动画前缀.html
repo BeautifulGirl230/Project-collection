@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>动画-自定义动画前缀</title>
+		<script src="../lib/vue-2.4.0.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			 /*
+			v-enter 【这是一个时间点】是进入之前，元素的起始状态，此时还没有开始进入
+			v-leave-to  【这是一个时间点】是动画离开之后离开的终止状态，此时元素的动画已经结束了
+			*/
+			.v-enter,
+			.v-leave-to{
+				opacity: 0;
+				transform: translateX(180px);	/* 位移 */
+			}
+			
+			/*
+			v-enter-active 【入场动画的时间段】
+			v-leave-active 【离场动画的时间段】
+			*/
+			.v-enter-active,
+			.v-leave-active{
+				transition: all .4s ease;
+			}
+			
+			.my-enter,
+			.my-leave-to{
+				opacity: 0;
+				transform: translateX(180px);	/* 位移 */
+			}
+			
+			/*
+			v-enter-active 【入场动画的时间段】
+			v-leave-active 【离场动画的时间段】
+			*/
+			.my-enter-active,
+			.my-leave-active{
+				transition: all .4s ease;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<input type="button" name="button" value="点击" @click="folet =! folet" /><br />
+			<transition>
+				<h3 v-if="folet">这是一个h3</h3>
+			</transition>
+			<hr >
+			
+			<input type="button" name="button2" value="点击2" @click="folet2 =! folet2" /><br />
+			<transition name="my">
+				<h3 v-if="folet2">这是一个h3</h3>
+			</transition>
+		</div>
+		
+		<script type="text/javascript">
+			var vm = new Vue({
+				el:'#app',
+				data:{
+					folet:true,
+					folet2:true
+				},
+				methods:{
+					toggle(){
+						this.folet =! this.folet
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

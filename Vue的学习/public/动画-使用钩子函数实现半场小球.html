@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>动画-使用钩子函数实现半场小球</title>
+		<script src="../lib/vue-2.4.0.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.ball{
+				width: 15px;
+				height: 15px;
+				border-radius: 50%;
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<input type="button" value="点击滑动" @click="flag=!flag" />
+			<transition 
+			@before-enter="beforeEnter"
+			@enter="enter"
+			@after-enter="agterEnter">
+				<div class="ball" v-show="flag"></div>
+			</transition>
+		</div>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el:'#app',
+				data:{
+					flag:false
+				},
+				methods:{
+					 //动画钩子函数的第一个参数:el表示要执行动画的那个DOM元素，可以认为el是通过document.getElementById()得到的
+					beforeEnter(el){
+						//设置起始位置
+						el.style.transform="translate(0,0)"
+					},
+					enter(el,done){
+						//这句话没有实际的作用，但是如果不屑，出不来动画效果  可以认为el.offsetWidth会强制动画刷新
+						//小球完成动画之后哦的结束状态
+						el.offsetWidth
+						el.style.transform="translate(150px,150px)"
+						el.style.transition="all 1s ease"
+						
+						//这里的done,其实就是agftereEnter这个函数
+						done()
+					},
+					agterEnter(el){
+						this.flag=false
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

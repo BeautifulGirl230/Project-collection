@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>组件-创建组件的几种方式</title>
+		<script src="../lib/vue-2.4.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<!--如果要使用组件，直接把组件的名称，以HTML的形式引入到页面中即可}-->
+			<!--注意如果用驼峰形式的命名， 要用横杠并取消大写-->
+			<my-com1></my-com1>
+			<my-com2></my-com2>
+			<mycom3></mycom3>
+			<mycom4></mycom4>
+		</div>
+		
+		<!-- 在创建外部 Vue 组件时必须在 el:'#app' 也就是<div id:"app"> 之外创建,不能在<div id:"app">内创建 -->
+		<template id="temp1">
+			<div>
+				<h2>使用Vue.extend在外部创建全局的Vue组件方法四</h2>
+			</div>
+		</template>
+		
+		<script type="text/javascript">
+			<!-- 创建组件方法一 -->
+			 //1.1 使用Vue.extend来创建全局的Vue组件
+			var com1 = Vue.extend({
+				//通过template属性，指定组件要展示的HTML结构
+				template:'<h2>使用Vue.extend来创建全局的Vue组件方法一</h2>'
+			})
+			//1.2 使用Vue.component('组件的名称',创建出来的组件模板对象)
+			Vue.component('myCom1',com1)
+			
+			<!-- 创建组件方法二 -->
+			//Vue.component第一个参数，组建的名称在将来引用组建的时候，就是一个标签形式的他来引入
+			//第二个参数 Vue.extend创建的组件，其中 template就是组件将来要展示的HTML内容
+			Vue.component('myCom2',Vue.extend({
+				template:'<h2>使用Vue.extend来创建全局的Vue组件方法二</h2>'
+			}))
+			
+			<!-- 创建组件方法三 -->
+			//注意无论用哪种方式创建出来的组件，组建的template属性指向的模板内容，必须有且只有唯一的一个根元素
+			Vue.component('mycom3',{
+				template:'<h2>使用Vue.extend来创建全局的Vue组件方法三</h2><span></span>'
+			})
+			
+			<!-- 创建组件方法四 -->
+			//这是在外部定义的组件结构
+			Vue.component('mycom4',{
+				template:'#temp1'
+			})
+			
+			var vm = new Vue({
+				el:'#app',
+				data:'',
+			})
+		</script>
+	</body>
+</html>

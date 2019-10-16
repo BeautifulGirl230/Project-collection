@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>动画-显示与隐藏</title>
+		<script src="../lib/vue-2.4.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="button" name="button" value="点击" @click="toggle" /><br />
+			<h3 v-if="folet">这是一个h3</h3>
+		</div>
+		
+		<script type="text/javascript">
+			var vm = new Vue({
+				el:'#app',
+				data:{
+					folet:false
+				},
+				methods:{
+					toggle(){
+						this.folet =! this.folet
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
