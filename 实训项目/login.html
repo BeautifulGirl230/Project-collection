@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body{margin: 0px;padding: 0px;}
+			.Middle{width:1240px; height: 500px; margin: 0 auto; padding: 20px 0px 60px 0px; /* background-color: #46AD38; */}
+			.Middle_a{font-size: 15px;}
+			.Middle_Link{width: 1200px;}
+			.HomePage{padding-left: 50px; color: #000000; text-decoration: none;}
+			.Login_Middle{color: #A7A7A7; text-decoration: none;}
+			.Middle_color{width: 1000px; height: 450px; background-color: #ECECEC; margin: 0 auto;padding-top: 10px;}
+			.Middle_login{width: 980px; height: 440px; background-color: #FEFEFE; margin: 0 auto;}
+			#Login{padding-top: 45px;margin-left: 160px;}
+			#Login_Text{font-family: "微软雅黑";}
+			#Middle_Name_password{margin-left: 80px; float: left;}
+			#Name{padding: 5px 5px 5px 5px;width: 250px;height: 25px;}
+			#Pwd{padding: 5px 5px 5px 5px;width: 250px;height: 25px;}
+			.mouse-cursor-gradient-tracking {
+				position: relative;
+				background: red;
+				padding: 0.5rem 1rem;
+				font-size: 1rem;
+				border: none;
+				color: white;
+				cursor: pointer;
+				outline: none;
+				overflow: hidden;
+				margin-left: 55px;
+				width: 250px;
+				border-radius: 25px;
+			}
+			.mouse-cursor-gradient-tracking span {position: relative;}
+			.mouse-cursor-gradient-tracking::before {
+				--size: 0;
+				content: '';
+				position: absolute;
+				left: var(--x);
+				top: var(--y);
+				width: var(--size);
+				height: var(--size);
+				background: radial-gradient(circle closest-side, pink, transparent);
+				transform: translate(-50%, -50%);
+				/* transition: width 0.2s ease, height 0.2s ease;    延迟 */ 
+			}
+			.mouse-cursor-gradient-tracking:hover::before {--size: 150px;}
+			#Middle_Hui{color: #A7A7A7;font-size: 12px;margin-left: 80px;}
+			#Middle_Register{text-decoration: none;color: red;font-size: 12px;}
+			#ForgetPassword{text-decoration: none;color: #02639A;font-size: 12px;margin-left: 55px;}
+			.Middle_Name_Text{font-size: 14px;}
+			.Middle_Tips{font-size: 13px;margin-left: 50px;color: red;height: 6px;}
+			#Middle_Login_Left{width: 400px;float: left;}
+			#Middle_Img{float: right; width: 468px;}
+			.Middle_Name_div{height: 25px;}
+			#Middle_Login_div{margin-top: 25px;}
+			.Middle_Top{margin-top: 25px;}
+			.Black{border: 2px solid #000000;padding: 5px 5px 5px 5px;width: 250px;height: 25px;}
+			.Black2{border: 2px solid #CCCCCC;padding: 5px 5px 5px 5px;width: 250px;height: 25px;}
+			.Middle_checkbox{margin-left: 55px;border-radius: 100%;background: #ddd;position: relative;-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.2);-moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.2);box-shadow: 0px 1px 2px rgba(0,0,0,0.2);}
+		</style>
+	</head>
+	<body>
+		<div class="Middle">
+			<div class="Middle_Link">
+				<a class="Middle_a HomePage" href="#">首页 &nbsp;></a>
+				<a class="Middle_a Login_Middle" href="#">登录</a>
+			</div>
+			<div class="Middle">
+				<div class="Middle_color">
+					<div class="Middle_login">
+						<div id="Middle_Login_Left">
+							<div id="Login">
+								<h2 id="Login_Text">欢迎登录goe视界</h2>
+							</div>
+							<div id="Middle_Name_password">
+								<p>
+									<div class="Middle_Name_div">
+										<span class="Middle_Name_Text">账号：</span>
+										<input type="text" class="userName" name="userName" id="Name" placeholder="请输入账号" onfocus="AccountName(this)" onblur="AccountName2(this)" onmousemove="this.className='Black'" onmouseout="this.className='Black2'" />
+									</div>
+								</p>
+								<p>
+									<div class="Middle_Tips">
+										<span id="USER">
+											
+										</span>
+									</div>
+								</p>
+								<p>
+									<div class="Middle_Name_div">
+										<span class="Middle_Name_Text">密码：</span>
+										<input type="password" class="password" name="password" id="Pwd" placeholder="6-16个英文字母或数字" onfocus="AccountPwd(this)" onblur="AccountPwd2(this)" onmousemove="this.className='Black'" onmouseout="this.className='Black2'" />								
+									</div>
+								</p>
+								<p>
+									<div class="Middle_Tips">
+										<span id="PASSWORD">
+											
+										</span>
+									</div>
+								</p>
+								<p>
+									<div class="Middle_Login_div Middle_Top">
+										<samp>
+											<button class="mouse-cursor-gradient-tracking" onclick="sNameCheck()">
+												<span>登录</span>
+											</button>
+										</samp>
+									</div>
+								</p>
+								<p>
+									<div class="Middle_checkbox_div Middle_Top">
+										<input type="checkbox" class="Middle_checkbox" />
+										<span>两周内自动登录</span>
+									</div>
+								</p>
+								<p>
+									<div class="Middle_Text Middle_Top">
+										<span>
+											<a id="ForgetPassword" href="#">忘记密码？</a>
+										</span>
+										<span>
+											<a id="Middle_Hui">还不是会员？</a><a id="Middle_Register" href="#">去注册</a>
+										</span>
+									</div>
+								</p>
+							</div>
+						</div>
+						<img id="Middle_Img" src="img/GBEUMHLJLI20160405221020.png" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function AccountName(zh){
+				if(zh.id == "Name"){
+					if (zh.placeholder == '请输入账号'){
+						zh.placeholder="";
+						zh.className = 'userName';
+					}else{
+						zh.className = 'userName';
+					}
+				}
+			}
+			function AccountName2(zh){
+				if(zh.id == "Name"){
+					if(zh.placeholder == ""){
+						zh.placeholder = "请输入账号"
+						zh.className = 'userName';
+					}else if(zh.className != '请输入账号'){
+						zh.className = 'userName'
+					}
+				}
+			}
+			function AccountPwd(mm){
+				if(mm.id == "Pwd"){
+					if (mm.placeholder == '6-16个英文字母或数字'){
+						mm.placeholder = "";
+						mm.className = 'password';
+					}else{
+						mm.className = 'password';
+					}
+				}
+			}
+			function AccountPwd2(mm){
+				if(mm.id == "Pwd"){
+					if (mm.placeholder == ''){
+						mm.placeholder = "6-16个英文字母或数字";
+						mm.className = 'password';
+					}else if(mm.password != '6-16个英文字母或数字'){
+						mm.className = 'password';
+					}
+				}
+			}
+			function sNameCheck(){
+				var userName = document.getElementById("Name").value;
+				var password = document.getElementById("Pwd").value;
+				var Text1 = document.getElementById("USER");
+				var Text2 = document.getElementById("PASSWORD");
+				if(userName == ""){
+					Text1.innerHTML = "<a>账号的输入不正确，请重新输入；</a>"
+				}
+				if(password == ""){
+					Text2.innerHTML = "<a>密码的输入不正确，请重新输入；</a>"
+				}
+			}
+		</script>
+		<script type="text/javascript">
+			var btn = document.querySelector('.mouse-cursor-gradient-tracking')
+			btn.onmousemove = function(e) {
+				var x = e.pageX - btn.offsetLeft - btn.offsetParent.offsetLeft
+				var y = e.pageY - btn.offsetTop - btn.offsetParent.offsetTop
+				btn.style.setProperty('--x', x + 'px')
+				btn.style.setProperty('--y', y + 'px')
+			}
+		</script>
+	</body>
+</html>
