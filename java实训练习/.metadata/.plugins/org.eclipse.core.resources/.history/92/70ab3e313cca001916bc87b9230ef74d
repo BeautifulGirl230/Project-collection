@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>index.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <!--<meta name="content-type" content="text/html; charset=UTF-8">-->
+    <meta charset="utf-8">
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+    <form name="f1" id="f1" action="servlet/one" method="post">
+      <table>
+        <tr>
+          <td>Login:</td>
+          <td><input type="text" name="login" id="login"></td>
+        </tr>
+        <tr>
+          <td>Password:</td>
+          <td><input type="password" name="password" id="password"></td>
+        </tr> 
+        <tr>
+        	<td>性别：</td>
+        	<td>
+        		<input type="radio" name="sex" value="男" checked="男">男
+        		<input type="radio" name="sex" value="女">女
+        	</td>
+        </tr>
+        <tr>
+        	<td>城市：</td>
+        	<td>
+        		<select name="City">
+        			<option value="武汉">武汉</option>
+        			<option value="上海">上海</option>
+        			<option value="苏州">苏州</option>
+        		</select>
+        	</td>
+        </tr>
+        <tr>
+        	<td>喜欢：</td>
+        	<td>
+        		<input type="checkbox" name="likes" value="听歌">听歌
+        		<input type="checkbox" name="likes" value="写歌">写歌
+        		<input type="checkbox" name="likes" value="唱歌">唱歌
+        		<input type="hidden" name="id" value="001">
+        	</td>
+        </tr>
+        
+        <tr>
+          <td colspan="2"><input type="submit"></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

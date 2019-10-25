@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<server auto-publish-setting="2" auto-publish-time="1" deployDir="wtpwebapps" has-configuration="false" hostname="localhost" id="Tomcat v8.0 at localhost" java-location="C:\Program Files\Java\jdk1.8.0_211" name="Tomcat v8.0 at localhost" runtime-id="Tomcat v8.0" server-location="F:\Tomcat\apache-tomcat-8.5.45" server-type="org.eclipse.jst.server.tomcat.80" server-type-id="org.eclipse.jst.server.tomcat.80" start-timeout="45" stop-timeout="15" testEnvironment="false" timestamp="23" useAutoDeploy="true">
+  <list key="modules" value0="服装商务平台::org.eclipse.jst.jee.server:服装商务平台::jst.web::3.1%%EXPLODED"/>
+</server>

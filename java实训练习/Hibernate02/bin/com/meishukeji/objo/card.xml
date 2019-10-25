@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.meishukeji.objo.Card" table="cardTable">
+		<id name="cardid">
+			<!-- 表示引用com.meshukeji.pojo.Card的主键值 是引用 teacher属性对应的类中的id值 -->
+			<generator class="foreign">
+				<param name="property">teacher</param>
+			</generator>
+		</id>
+		<property name="name"></property>
+		
+		<!-- 一对一的配制   constrained="true"  表示生成的数据库表中，产生外键约束-->
+		<one-to-one name="teacher" constrained="true"></one-to-one>
+	</class>
+</hibernate-mapping>

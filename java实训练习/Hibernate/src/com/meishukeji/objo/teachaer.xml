@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<!-- 类和表的映射 ,需要将这个文件写到 hibernate.cfg.xml中 -->
+	<!-- class name="类名" table="表名" -->
+	<class name="com.meishukeji.objo.Teacher" table="teacher">
+		<!--id name="类的属性名,主键，必须要有" column="对应表中的列" -->
+		<id name="id" column="teacherId">
+			<!-- generator class="assigned" 主键的生成方式 assigned：表示主键的值有应用程序自己给值 -->
+			<generator class="assigned"></generator>
+		</id>
+		<!--property 属性 name="类中的属性名" column="表中的列名" not-null="是否非空" type="类型" 
+			length="长度" -->
+		<property name="name" column="tname1" not-null="true" type="string" length="50"></property>
+		<property name="sex"></property>
+		<property name="birthday"></property>
+	</class>
+</hibernate-mapping>

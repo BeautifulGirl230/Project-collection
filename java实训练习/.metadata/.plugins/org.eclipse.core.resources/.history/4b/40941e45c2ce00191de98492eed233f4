@@ -1,0 +1,13 @@
+package Connection.sql;
+
+import org.apache.catalina.connector.Request;
+
+public class Connection {
+	
+	public void testOracle(){
+		Connection conn = null;
+		String userName = "";
+		String password = "";
+		
+	}
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.meshukeji.pojo.Teacher" table="teacher">
+		<id name="id" column="teacherId">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="name" column="tname1" not-null="true" type="string" length="50"></property>
+		<property name="sex"></property>
+		<property name="birthday"></property>
+	</class>
+
+</hibernate-mapping>

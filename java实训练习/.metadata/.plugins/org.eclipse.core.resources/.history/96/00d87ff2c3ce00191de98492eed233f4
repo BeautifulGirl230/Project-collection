@@ -1,0 +1,24 @@
+package Connection.sql;
+
+import java.sql.SQLException;
+
+import org.apache.catalina.connector.Request;
+
+public class Connection {
+	
+	public static java.sql.Connection getConn(){
+		Connection conn = null;
+			Class.forName("oracle.jdbc.OracleDriver");
+			String url = "jdbc:oracle:thin:@localhost:1521:xe";
+			String user = "Snake";
+			String password = "snake";
+	
+
+		
+		return conn;
+	}
+	
+	public static void closeConn(Connection conn){
+		if(conn!=null && conn.)
+	}
+}

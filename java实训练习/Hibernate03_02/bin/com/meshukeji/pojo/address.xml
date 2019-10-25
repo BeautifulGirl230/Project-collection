@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.meshukeji.pojo.Address" table="address">
+		<id name="addId">
+			<generator class="sequence">
+				<param name="sequence">qq</param>
+			</generator>
+		</id>
+		<property name="address"></property>
+		<many-to-one name="teacher" column="ref_teacherId" not-null="true"></many-to-one>
+	</class>
+</hibernate-mapping>

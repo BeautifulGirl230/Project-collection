@@ -1,0 +1,27 @@
+package Connection.sql;
+
+import java.sql.SQLException;
+
+import org.apache.catalina.connector.Request;
+
+public class Connection {
+	
+	public static java.sql.Connection getConn(){
+		
+		try {
+			Connection conn = null;
+			Class.forName("oracle.jdbc.OracleDriver");
+			String url = "jdbc:oracle:thin:@localhost:1521:xe";
+			String user = "Snake";
+			String password = "snake";
+			conn = java.sql.DriverManager.getConnection(url, user, password);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+}

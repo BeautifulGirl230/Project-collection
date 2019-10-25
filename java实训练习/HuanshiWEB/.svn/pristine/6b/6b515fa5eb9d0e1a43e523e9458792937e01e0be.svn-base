@@ -1,0 +1,82 @@
+/* =========================登录页样式.开始======================= */
+.login-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -150px auto auto -140px;
+    width: 280px;
+    text-align: center;
+}
+
+.login-form .col {
+    position: relative;
+    padding: 10px 0;
+}
+
+.login-form .col .icon {
+    position: absolute;
+    display: block;
+    top: 24px;
+    left: 10px;
+    width: 14px;
+    height: 14px;
+    background: url(../../img/skin_icons.png) no-repeat;
+    cursor: pointer;
+}
+
+.login-form .col .icon.user {
+    background-position: 0 -140px;
+}
+
+.login-form .col .icon.pwd {
+    background-position: -28px -140px;
+}
+
+.login-form .col .login-input {
+    display: block;
+    padding: 5px 10px 5px 34px;
+    background: #fff;
+    border: 0;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 32px;
+    height: 32px;
+    width: 236px;
+    color: #333;
+}
+
+.login-form .col .login-btn {
+    display: block;
+    padding: 5px 0;
+    font-size: 14px;
+    color: #fff;
+    width: 100%;
+    line-height: 28px;
+    height: 42px;
+    background: #0C4B77;
+    border: 0;
+    border-radius: 3px;
+    letter-spacing: .5em;
+    cursor: pointer;
+}
+
+.login-tips i {
+    display: inline-block;
+    margin-right: 5px;
+    width: 14px;
+    height: 14px;
+    background: url(../../img/skin_icons.png) -56px -140px no-repeat;
+}
+
+.login-tips p {
+    display: inline-block;
+    height: 14px;
+    line-height: 14px;
+    font-size: 12px;
+    font-weight: normal;
+    color: #83b7ce;
+    vertical-align: middle;
+}
+
+
+/* ==========================登录页样式.结束======================== */

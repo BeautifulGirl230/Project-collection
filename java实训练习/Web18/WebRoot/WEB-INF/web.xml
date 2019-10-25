@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Web18</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- one配制 -->
+  <servlet>
+  <!-- one名子 -->
+     <servlet-name>one</servlet-name>
+    <!-- one所在的类文件，包名.类名 -->
+     <servlet-class>xpoint.com.controll.OneServlet</servlet-class>
+     
+  </servlet>
+
+  <!-- one映射  表示这个one的访问方式 -->
+  <servlet-mapping>
+  <!-- one名子 -->
+    <servlet-name>one</servlet-name>
+    <!-- one 访问地址 -->
+    <url-pattern>/test/abc</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!-- TwoServlet配制 -->
+  <servlet>
+  	<!-- TwoServlet名子 -->
+    <servlet-name>TwoServlet</servlet-name>
+    <!-- TwoServlet所在的类文件，包名.类名 -->
+    <servlet-class>xpoint.com.controll.TwoServlet</servlet-class>
+  </servlet>
+  
+  
+  <!-- TwoServlet映射  表示这个TwoServlet的访问方式 -->
+  <servlet-mapping>
+  	<!-- TwoServlet名字 -->
+    <servlet-name>TwoServlet</servlet-name>
+    <!-- TwoServlet 访问地址 -->
+    <url-pattern>/servlet/TwoServlet</url-pattern>
+  </servlet-mapping>
+</web-app>

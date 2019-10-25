@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;HuanshiWEB/WebRoot/login.html&apos; to &apos;login.jsp&apos;" description="Rename resource &apos;login.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebRoot/login.html" name="login.jsp" stamp="1568184820683" updateReferences="true"/>
+</session>

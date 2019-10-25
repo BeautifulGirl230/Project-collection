@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Web22</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <filter>
+  	<filter-name>MyFilter</filter-name>
+  	<filter-class>meishukeji.com.common.MyFilter</filter-class>
+  </filter>
+
+	
+  <filter-mapping>
+  	<filter-name>MyFilter</filter-name>
+<!--  表示，不论客户端发送任何请求，都会经过MyFliter过滤器   -->
+  	<url-pattern>/*</url-pattern>
+  	<!-- 表示请求servlet目录下的页面或servlet，都会经过这个过滤器 -->
+<!-- <url-pattern>/servlet/*</url-pattern> -->
+  </filter-mapping>
+  <servlet>
+    <servlet-name>StudentServlet</servlet-name>
+    <servlet-class>meishukeji.com.pojo.Student.StudentServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>StudentServlet</servlet-name>
+    <url-pattern>/servlet/StudentServlet</url-pattern>
+  </servlet-mapping>
+</web-app>

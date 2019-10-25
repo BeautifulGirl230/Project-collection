@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* banner */
+body{
+	margin: 0px;
+	padding: 0px;
+	}
+.c-banner{
+	width: 100%;
+	height: 658px;
+	position: relative;
+	top: 0px;
+}
+/* 设置c-banner 所有图片 */
+.c-banner img{
+	width: 100%;
+	background-size: contain;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+/* 设置banner里图片高度 */
+.c-banner .banner .MiddleIMG{
+	height: 654px;
+	overflow: hidden; 
+}
+.c-banner .banner ul{
+	list-style: none;
+	padding-left: 0px;
+	margin-bottom: 0px;
+}
+.c-banner .banner ul li{
+	position: absolute
+	display: none;
+	opacity: 0;
+}
+.c-banner .banner ul li:nth-child(1){
+	opacity: 1;
+	display: block;
+}
+.c-banner .banner ul li img{
+	width: 100%;
+	position: absolute;
+	top: 0px;
+}
+.c-banner .banner ul li:first-child img{
+	position: relative;
+}
+/* 切换箭头 */
+.c-banner .nexImg,.c-banner .preImg{
+	padding: 20px 10px 20px 10px;
+	position: absolute;
+	top: 50%;
+	background: #000000;
+	opacity: 0.3;
+	border-radius: 8px;
+	margin: -50px 350px;
+}
+.c-banner .nexImg{
+	right: 0px;
+}
+.c-banner .nexImg:hover,.c-banner .preImg:hover{
+	opacity: 0.8;
+}
+.c-banner .jumpBtn{
+	left: 50%;
+	position: absolute;
+	bottom: 10px;
+	text-align: center;
+}
+.c-banner .jumpBtn ul{
+	margin-bottom: 0px;
+	padding: 0px;
+}
+.c-banner .jumpBtn ul li{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	opacity: 0.6;
+	margin-left: 10px;
+	display: inline-block;
+	background-color: white;
+}
+.c-banner .jumpBtn ul li:first-child{
+	margin-left: 0px;
+}
+/* @media screen and (max-width:768px) {
+	.c-banner{
+		width: 100%;
+		height: 345px;
+		overflow: hidden;
+	}
+	.c-banner .banner ul li img{
+		width: 768px;
+		height: 345px;
+		position: absolute;
+		left: 50%;
+		margin-left: -384px;
+	}
+} */

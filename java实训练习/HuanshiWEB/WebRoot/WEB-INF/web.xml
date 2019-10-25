@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>HuanshiWEB</display-name>
+ 
+  <servlet>
+  <servlet-name>GoodsServlet</servlet-name>
+  <servlet-class>com.huanshi.servlet.GoodsServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+  <servlet-name>RegServlet</servlet-name>
+  <servlet-class>com.huanshi.servlet.RegServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+  <servlet-name>LoginServlet</servlet-name>
+  <servlet-class>com.huanshi.servlet.LoginServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>indexServlet</servlet-name>
+    <servlet-class>com.huanshi.servlet.indexServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+  <servlet-name>GoodsServlet</servlet-name>
+  <url-pattern>/GoodsServlet</url-pattern>
+  </servlet-mapping>
+
+  
+  <servlet-mapping>
+  <servlet-name>LoginServlet</servlet-name>
+  <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>indexServlet</servlet-name>
+    <url-pattern>/indexServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  <servlet-name>RegServlet</servlet-name>
+  <url-pattern>/RegServlet</url-pattern>
+  </servlet-mapping>
+
+
+</web-app>

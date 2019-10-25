@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body{
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				font-family: 'icomoon';
+			}
+			body ul{
+				list-style: none;
+			}
+			@font-face {
+			  font-family: 'icomoon';
+			  src:  url('fonts/icomoon.eot?fcb9nu');
+			  src:  url('fonts/icomoon.eot?fcb9nu#iefix') format('embedded-opentype'),
+			    url('fonts/icomoon.ttf?fcb9nu') format('truetype'),
+			    url('fonts/icomoon.woff?fcb9nu') format('woff'),
+			    url('fonts/icomoon.svg?fcb9nu#icomoon') format('svg');
+			  font-weight: normal;
+			  font-style: normal;
+			  font-display: block;
+			}
+			.up {
+				width: 100%;
+				height: 160px;
+				background-color: #333;
+				margin:0;
+				padding:0;
+				overflow:hidden
+			}
+			.up li{
+				color: white;
+				
+			}
+			.top a{
+				color: white;
+				text-decoration: none;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			.top a:hover{
+				color: red;
+			}
+			.top span:hover{
+				color: red;
+			}
+			.top{
+				margin-left: -50px;
+			}
+			.fl{
+				float: left;
+				
+			}
+			.fr{
+				float: right;
+			}
+			.up_top{
+				width: 1200px;
+				height: 40px;
+				margin: -10px auto;
+			}
+			.up_top a{
+				font-size: 12px;
+			}
+			.up_top span{
+				position: relative;
+				top: 3px;
+			}
+			.icon{
+				font-family: 'icomoon';
+				font-size: 17px;
+				color: darkgray;
+			}
+			.login{
+				width: 1200px;
+				height: 120px;
+				margin: 0 auto;
+				
+			}
+			.login_city{
+				background-color: #333;
+				width: 100px;
+				height: 50px;
+				color: white;
+				border: 1px solid white ;
+				margin-left: 60px;
+				margin-top: 60px;
+				
+			}
+			.login_select{
+				height: 40px;
+				width: 450px;
+				background-color:red ;
+				margin-top: 60px;
+				margin-left: 100px;
+				border: 1px solid #333;
+			}
+			.login_icon{
+				height: 40px;
+				width: 50px;
+				background-color: white;
+				text-align: center;
+				
+			}
+			.login_icon span{
+				text-align: center;
+				color: #A9A9A9;
+				font-size: 20px;
+				position: relative;
+				top: 10px;
+			}
+			.login_input input {
+				height: 38px;
+				width: 350px;
+				border: none;
+				outline:none;
+				resize:none;
+			} 
+			.login_btn input{
+				height: 40px;
+				width: 50px;
+				border: none;
+				color: white;
+				background-color: black;
+			}
+			.login_Popular{
+				font-size: 14px;
+				position: relative;
+				left: -40px;
+				top: -13px;
+			}
+			.login_Popular a{
+				text-decoration: none;
+				color: white;
+				margin-right: 20px;
+				font-size: 13px;
+			}
+			.login_Popular a:hover{
+				color: red;
+			}
+			.Shopping{
+				height: 60px;
+				width: 200px;
+				margin-top: 20px;
+			}
+			.Shopping_p{
+				height: 50px;
+				width: 80px;
+				font-size: 14px;
+				color: white;
+				border: none;
+				margin-top: 10px;
+				text-align: center;
+				line-height:25px;
+				background-color: red;
+			}
+			.Shopping_cat{
+				height: 60px;
+				width: 120px;
+				font-size: 14px;
+				color: #333333;
+				border: none;
+				text-align: center;
+				line-height:20px;
+				background-color: white;
+			}
+			.Shopping_cat span{
+				font-size: 24px;
+			}
+			.Shopping_cat_number{
+				width: 16px;
+				height: 16px;
+				color: white;
+				text-align: center;
+				line-height: 15px;
+				font-size: 14px;
+				background-color: red;
+				border-radius:7px 7px 7px 0;
+				position: relative;
+				left: -68px;
+				top: -60px;
+			}
+			.up_navigation{
+				width: 1130px;
+				height: 80px;
+				margin: 0px auto;
+			}
+			.up_navigation_a{
+				width: 100px;
+				height: 80px;
+			}
+			.up_navigation_css:hover{
+				color: white;
+				background-color: red;
+			}
+			.up_navigation_css:hover p{
+				color: white;
+			}
+			.up_navigation_experience{
+				width: 100px;
+				height: 60px;
+				border-left:2px solid black ;
+				border-right:2px solid black ;
+				
+				position: relative;
+				top:10px;
+			}
+			.up_navigation_experience1{
+				width: 100px;
+				height: 60px;
+				border-left:0px solid black ;
+				border-right:2px solid black ;
+				display: block;
+				position: relative;
+				top: 10px;
+			}
+			.up_navigation_css{
+				width: 95px;
+				height: 80px;
+				margin: 0 auto;
+				position: relative;
+				left: 2.2px;
+				
+				color: #000000;
+				top: -10px;
+				text-align: center;
+				
+				
+			}
+			.up_navigation_css .icon{
+				width: 80px;
+				font-size: 26px;
+				color: #000000;
+				text-align: center;
+			}
+			.up_navigation_css p{
+				height:30px;
+				width: 80px;
+				position: relative;
+				top: 10px;
+				margin: 0 auto;
+				
+			}
+			.up_navigation_css p img{
+				height:30px;
+				width: 80px;
+			}
+			/* ----------------------------------------页眉---------------------------------- */
+			.content{
+				width: 1200px;
+				height:1600px;
+				margin: 0 auto;
+			
+			
+			
+			
+			/* ------------------------------------------页脚----------------------------------- */
+		</style>
+		
+	</head>
+	<body>
+		<div class="up">
+			<div class="up_top">
+				<ul>
+					<li class="fl top"><a href="login.html">登录</a>|<a href="register.html">注册</a>|<a href="#">帮助中心</a></li>
+					<li class="fr top"><a>您好，欢迎来到幻视</a><a>客服热线: 8888-8888-8888</a><a href="#">在线客服<span class="icon"></span></a></li>
+				</ul>
+			</div>
+			<div class="login">
+				<div class="login_img fl">
+				<img  src="img/goe_logo.png" />
+				</div>
+				<div>
+				<select name="login_city" class="login_city fl">
+					<option>请选择城市</option>
+					<option>湖南</option>
+					<option>湖北</option>
+					<option>江苏</option>
+					<option>上海</option>
+				</select>
+				</div>
+				<div class="login_select fl">
+					<div class="login_icon fl">
+					<span class="icon"></span>
+					</div>
+					<div class="login_input fl" >
+						<input type="text" name="select" id="login_text" value="输入商品关键词进行搜索" onfocus="if(value=='输入商品关键词进行搜索'){value=''}" onblur="if(value==''){value='输入商品关键词进行搜索'}" />
+					</div>
+					<div class="login_btn">
+						<input type="button" name="select" id="login_btn" value="搜索" />
+					</div>
+					<div class="login_Popular">
+						<ul>
+							<li>
+								热门搜索：<a href="#">镜框</a><a href="#">镜片</a><a href="#">太阳镜</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="Shopping fr">
+					<a href="#"><div class="Shopping_p fl">
+						<p>体验店</p>
+					</div></a>
+					<a href="#"><div class="Shopping_cat fr">
+					<p><span class="icon"></span>我的购物车</p>
+					</div>
+					<div class="Shopping_cat_number fr">
+						0
+					</div></a>
+				</div>
+			</div>
+	
+		</div>
+		<div class="up_navigation">
+			
+		<a href="index.html">
+			<div class="up_navigation_a  fl">
+			<div class="up_navigation_experience">
+				<div class="up_navigation_css">
+				<p><img src="img/goe_logo.png"></p>
+				<p>体验店</p>
+				</div>
+			</div>
+			</div>
+		</a>
+		
+		<a href="index.html">
+			<div class="up_navigation_a  fl">
+			<div class="up_navigation_experience1 fl">
+				<div class="up_navigation_css">
+				<p class="icon"></p>
+				<p>首页</p>
+				</div>
+			</div>
+			</div>
+		</a>
+		
+		<a href="index.html">
+			<div class="up_navigation_a  fl">
+			<div class="up_navigation_experience1 fl">
+				<div class="up_navigation_css">
+				<p class="icon"></p>
+				<p>太阳镜</p>
+				</div>
+			</div>
+			</div>
+		</a>
+		
+		<a href="index.html">
+			<div class="up_navigation_a  fl">
+			<div class="up_navigation_experience1 fl">
+				<div class="up_navigation_css">
+				<p class="icon"></p>
+				<p>试戴</p>
+				</div>
+			</div>
+			</div>
+		</a>
+		
+		<a href="index.html">
+			<div class="up_navigation_a  fl">
+			<div class="up_navigation_experience1 fl">
+				<div class="up_navigation_css">
+				<p class="icon"></p>
+				<p>镜框</p>
+				</div>
+			</div>
+			</div>
+		</a>
+		
+		<a href="index.html">
+			<div class="up_navigation_a  fl">
+			<div class="up_navigation_experience1 fl">
+				<div class="up_navigation_css">
+				<p class="icon"></p>
+				<p>镜片</p>
+				</div>
+			</div>
+			</div>
+		</a>
+		
+		<a href="index.html">
+			<div class="up_navigation_a  fl">
+			<div class="up_navigation_experience1 fl">
+				<div class="up_navigation_css">
+				<p class="icon"></p>
+				<p>视光产品</p>
+				</div>
+			</div>
+			</div>
+		</a>
+		
+		<a href="index.html">
+			<div class="up_navigation_a  fl">
+			<div class="up_navigation_experience1 fl">
+				<div class="up_navigation_css">
+				<p class="icon"></p>
+				<p>特卖会</p>
+				</div>
+			</div>
+			</div>
+		</a>
+		
+		<a href="index.html">
+			<div class="up_navigation_a  fl">
+			<div class="up_navigation_experience1 fl">
+				<div class="up_navigation_css">
+				<p class="icon"></p>
+				<p>品牌馆</p>
+				</div>
+			</div>
+			</div>
+		</a>
+		
+		<a href="index.html">
+			<div class="up_navigation_a  fl">
+			<div class="up_navigation_experience1 fl">
+				<div class="up_navigation_css">
+				<p class="icon"></p>
+				<p>私人定制</p>
+				</div>
+			</div>
+			</div>
+		</a>
+		
+		<a href="index.html">
+			<div class="up_navigation_a  fl">
+			<div class="up_navigation_experience1 fl">
+				<div class="up_navigation_css">
+				<p class="icon"></p>
+				<p>资讯</p>
+				</div>
+			</div>
+			</div>
+		</a>
+		</div>
+		<!-- ----------------------------------------------------页眉--------------------------------------------- -->
+		<style type="text/css">
+			#DIV_left{border: 3px solid #A9A9A9;width: 550px;height: 530px;position: relative;float: left;}
+			#DIV_left_hr{border: 1px dashed #A9A9A9; width: 500px; margin-top: 40px;}
+			#DIV_left_img img{width: 500px;margin-left: 25px;}
+			#DIV_Prev_Next{width: 450px; height: 100px; margin: 20px 0px 0px 50px;}
+			#Next{float: right;}
+			#DIV_Prev_Next_img{width: 100px;}
+			#DIV_right{background-color: floralwhite;width: 580px;height: 530px; position: relative;float: right;}
+			#DIV_right h2{margin-left: 30px; font-family: 微软雅黑;}
+			#DIV_right  h3{margin-left: 30px; font-family: 微软雅黑;}
+			.H3_A{color: red;}
+			#H3_A{background-color: red;color: #FFFFFF;padding: 5px 5px 5px 5px; margin-left: 40px;}
+			.H4_A{margin-left: 35px;padding-right: 100px;}
+			#DIV_right h5{margin-top: 10px;}
+			.Input_Text{width: 30px;height: 30px;text-align: center;border:none;}
+			.Plus,.Minus{
+				display: block;
+				width: 17px;
+				height: 16px;
+				border-bottom: 1px solid #ddd;
+				line-height: 16px;
+				text-align: center;
+				background: #fff;
+				text-decoration:none;
+			}
+			.Plus_Minus{
+				display: block;
+				width: 17px;
+				border-left: 1px solid #ddd;
+				background: #F1F1F1;
+				font-size: 14px;
+				float: right;
+				/* position: relative; */
+			}
+			#Div_Plus_Minus{width: 174px;margin-left: 30px;float: left;position: absolute;}
+			#Div_Plus_Minus2{width: 104px;margin-left: 320px;position: absolute;}
+			.RightEye{color: #A9A9A9;}
+			.RightEye2{color: #A9A9A9;float: left;position: relative;margin-top: 5px;left: 210px;}
+			.RightEye3{color: #A9A9A9;float: left;position: relative;margin-top: 5px;left: 345px;}
+			#Introduce{position: absolute;top: 200px;font-size: 14px;left: 30px;}
+			#Introduce h5{color: red;}
+			#Introduce a{margin-left: 5px; margin-right: 5px; text-decoration: none;}
+			#button{position: absolute;top: 250px;left: 30px; width: 130px;height: 60px;background-color: lavenderblush;color: red;font-size: 17px;border-color: lightcoral;}
+			input:focus{color: red;}
+			#Middle{width: 100%;}
+			#Love{position:absolute;top: 65%;background:url(img/share.png) 25px 3px no-repeat;left: 50px;display: inline-block;font-style: normal;}
+			#Collection{position: relative;left: 50px;text-decoration: none;}
+			#Share{position: absolute;background: url(img/share.png) 25px -20px no-repeat;top: 65%;right: 50%;}
+			#Share a{position: relative;left: 50px;text-decoration: none;}
+			#REMAI {position: relative;top: 20px;text-align: center;}
+			#Bottom_left{width: 300px;height:900px;background-color: #F7F7F7;margin-top: 600px;}
+			.Bottom_left_div{display: block;}
+			#Bottom_left_img{ width: 200px;margin-left: 40px;margin-top: 40px;}
+			#text{margin-left: 10px;margin-top: 10px;}
+			#text a{text-decoration: none;color: #8A8A8A;}
+			#Bottom_left #TEXT:hover{color: #A9A9A9;}
+			#Bottom_left hr{border: 1px dashed #A9A9A9;}
+			#table-box{position: relative;left: 34%;top: -58%;}
+			#Details{border: 1px solid #A9A9A9;height: 850px;width: 788px;}
+			#table-box h3{height: 34px;border-bottom: 1px solid #A9A9A9;width: 790px;background:#FFFFFF;}
+			#table-box #cur{color: #FFFFFF;background: #A9A9A9;}
+			#table-box span{border: 1px solid #A9A9A9;width: 98px;padding: 4px 4px 4px 4px;display: block;float: left;text-align: center;}
+			#table-box p{position: absolute;top: 18px;width: 758px; height: 30px;background: #F1F1F1;padding: 6px 0px 0px 30px;border: 1px solid #A9A9A9;}
+			.TESFES{color: #A9A9A9;margin-left: 30px;}
+			#Details_div{position: absolute;padding-top: 40px;}
+			#Parameter{position: absolute;width: 757px;height: 30px;background: #F1F1F1;top: 17%;padding: 10px 0px 5px 30px;border: 1px solid #A9A9A9;}
+			#Parameter2{ height: 705px;margin-top: 143px;overflow-y: overlay;}
+			
+		</style>
+		<div class="content">
+			<div>
+				<h5><a>您当前的位置：镜片&nbsp;</a><a style="color: #A9A9A9;">>好视力1.553非球面单光蓝晶膜树脂镜片</a></h5>
+			</div>
+			<div id="DIV_left">
+				<div id="DIV_left_img">
+					<img src="img/YJNV3QEFHG20170601112250.jpg" >
+				</div>
+				<hr id="DIV_left_hr">
+				<div id="DIV_Prev_Next">
+					<img id="Prev" src="img/prev.jpg" >
+					<img id="DIV_Prev_Next_img" src="img/YJNV3QEFHG20170601112250.jpg" >
+					<img id="Next" src="img/next.jpg" >
+				</div>
+			</div>
+			<div id="DIV_right">
+				<h2>好视力1.553非球面单光蓝晶膜树脂镜片</h2>
+				<h3> <a class="H3_A">Vision价</a>：<a class="H3_A">¥398.00/副</a><a id="H3_A">Vision返利：购买后返券398.00元</a></h3>
+				<h5><a class="H4_A">销量：28件</a><a>好评：<img src="img/bg_start.png" ></a></h5>
+				<div id="Middle">
+				<div id="Div_Plus_Minus">
+					<a class="H3_A">数&nbsp;量：</a><input type="checkbox" name="checkbox"/><a class="RightEye">右眼&nbsp;&nbsp;</a><input class="Input_Text" type="text" value="1" maxlength="3" />
+					<b class="Plus_Minus">
+						<a class="Plus" href="javacript:void(0);" onclick="optNum('2700','+','R')">+</a>
+						<a class="Minus " href="javacript:void(0);" onclick="optNum('2700','-','R')">-</a>
+					</b>
+				</div>
+				<div><a class="RightEye2">片&nbsp;&nbsp;&nbsp;有库存</a></div>
+				<div id="Div_Plus_Minus2">
+					<input type="checkbox" name="checkbox2"/>左眼<input class="Input_Text" type="text" value="1" maxlength="3" />
+					<b class="Plus_Minus">
+						<a class="Plus" href="javacript:void(0);" onclick="optNum('2700','+','L')">+</a>
+						<a class="Minus " href="javacript:void(0);" onclick="optNum('2700','-','L')">-</a>
+					</b>
+				</div>
+				<a class="RightEye3">片&nbsp;&nbsp;&nbsp;有库存</a>
+				</div>
+				<div id="Introduce"><h5>现片Vision价:199.00元/片<a href="#">查看说明</a>定制片Vision价:274.00元/片<a href="#">查看说明</a><a href="#">不会填写，联系客服</a></h5></div>
+				<a href="shoppingCat.jsp"><input type="button" name="button" id="button" value="加入购物车" /></a>
+				<div id="Love"><a id="Collection" href="#">我要收藏</a></div>
+				<div id="Share"><a href="#">我要分享</a></div>
+			</div>
+			
+			<div id="Bottom">
+				<div id="Bottom_left">
+					<div id="REMAI">—————热卖产品—————</div>
+					<div class="Bottom_left_div">
+						<img id="Bottom_left_img" src="img/YJNV3QEFHG20170601112250.jpg" ><br/>
+						<div id="text">
+							<a href="#" id="TEXT">好视力1.553球面单光绿晶膜树脂镜片2267</a><br />
+						</div>
+							<div style="margin-top: 10px;">
+								<a class="Price_Text" style="color: red;margin-left: 50px;">¥99.00&nbsp;&nbsp;</a><a class="Price_Text2" style="font-size: 13px; text-decoration: line-through;color: #999;">¥99.00</a>
+							</div>
+						<hr >
+					</div>
+					<div class="Bottom_left_div">
+						<img id="Bottom_left_img" src="img/YJNV3QEFHG20170601112250.jpg" ><br/>
+						<div id="text">
+							<a href="#" id="TEXT">好视力1.553球面单光绿晶膜树脂镜片2267</a><br />
+						</div>
+							<div style="margin-top: 10px;">
+								<a class="Price_Text" style="color: red;margin-left: 50px;">¥99.00&nbsp;&nbsp;</a><a class="Price_Text2" style="font-size: 13px; text-decoration: line-through;color: #999;">¥99.00</a>
+							</div>
+						<hr >
+					</div>
+					<div class="Bottom_left_div">
+						<img id="Bottom_left_img" src="img/YJNV3QEFHG20170601112250.jpg" ><br/>
+						<div id="text">
+							<a href="#" id="TEXT">好视力1.553球面单光绿晶膜树脂镜片2267</a><br />
+						</div>
+							<div style="margin-top: 10px;">
+								<a class="Price_Text" style="color: red;margin-left: 50px;">¥99.00&nbsp;&nbsp;</a><a class="Price_Text2" style="font-size: 13px; text-decoration: line-through;color: #999;">¥99.00</a>
+							</div>
+						<hr >
+					</div>
+				</div>
+			</div>
+			
+			<div id="table-box">
+					<h3>
+						<span id="cur">商品详情</span>
+						<span>配镜指南</span>
+						<span>商品评论</span>
+						<span>售后保障</span>
+					</h3>
+					<p>产品描述：</p>
+					<div id="Details">
+						<div id="Details_div">
+						<a class="TESFES">功能：</a><a class="TESFES2">非球面单光</a>
+						<a class="TESFES">类型：</a><a class="TESFES2">非球面单光</a>
+						<a class="TESFES">材质：</a><a class="TESFES2">树脂 </a>
+						<a class="TESFES">颜色：</a><a class="TESFES2">透明</a>
+						<a class="TESFES">品牌：</a><a class="TESFES2">好视力</a>
+						</div>
+						<div id="Parameter">商品信息：</div>
+						<div id="Parameter2">
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+							bafadfadfadfa<br />
+						</div>
+					</div>
+			</div>
+		</div>
+		<!-- ----------------------------------------------------------------------页脚--------------------- -->
+		<style type="text/css">
+			.footer{
+				width: 1200px;
+				height: 350px;
+				margin: 0 auto;
+			}
+			.footer_Label{
+				width: 1200px;
+				height: 330px;
+				margin: 0 auto;
+			}
+			.label_1{
+				margin-top: 40px;
+				width: 200px;
+				height: 80px;
+				border: 1px solid #A9A9A9;
+			}
+			.label{
+				margin-left: 40px;
+			}
+			 .label_1 .icon{
+				width: 55px;
+				height: 80px;
+				font-size: 34px;
+				text-align: center;
+				line-height: 80px;
+				color: black;
+			}
+			.label_1 p{
+				
+			}
+			.label_1 a{
+				font-size: 12px;
+			}
+			.introduce{
+				width: 200px;
+			}
+			.introduce ul{
+				margin-top: 40px;
+				margin-left: -40px;
+			}
+			.introduce a{
+				text-decoration: none;
+				color: #333;
+				font-size: 14px;
+				line-height: 30px;
+			}
+			.introduce a:hover{
+				color: red;
+			}
+			.footer_bottom{
+				width: 100%;
+				height: 100px;
+				background-color: #000000;
+			}
+			.footer_bottom_a{
+				text-align: center;
+				color: white;
+				line-height: 100px;
+			}
+			.footer_bottom_a a{
+				text-decoration: none;
+				color: white;
+			}
+			#HR{}
+		</style>
+		<hr id="HR"/>
+		<div class="footer">
+			<div class="footer_Label">
+				<div class="fl">
+				<div class="label_1 ">
+					<div class="icon fl"></div>
+					<p>正品保证</p>
+					<a>正品真货,质量有保障</a>
+				</div>
+				<div class="introduce">
+				<ul>
+					<li>
+						<p>售后服务</p>
+						<hr />
+					</li>
+					<li><a href="#" >退换货说明</a></li>
+					<li><a href="#" >投诉建议</a></li>
+				</ul>
+				</div>
+				</div>
+				
+				
+				<div class="fl label">
+				<div class="label_1">
+					<div class="icon fl"></div>
+					<p>闪电发货</p>
+					<a>急速物流，急速送达</a>
+				</div>
+				<div class="introduce">
+				<ul>
+					<li>
+						<p>关于Vision</p>
+						<hr />
+					</li>
+					<li><a href="#" >公司简介</a></li>
+					<li><a href="#" >联系客服</a></li>
+					<li><a href="#" >免责申明</a></li>
+				</ul>
+				</div>
+				</div>
+				
+				<div class="fl label">
+				<div class="label_1">
+					<div class="icon fl"></div>
+					<p>优惠不断</p>
+					<a>天天低价畅选无忧</a>
+				</div>
+				<div class="introduce">
+				<ul>
+					<li>
+						<p>新手指南</p>
+						<hr />
+					</li>
+					<li><a href="#" >购物流程</a></li>
+					<li><a href="#" >会员特权</a></li>
+					<li><a href="#" >常见问题</a></li>
+					<li><a href="#" >Vision返卷说明</a></li>
+				</ul>
+				</div>
+				</div>
+				
+				<div class="fl label">
+				<div class="label_1">
+					<div class="icon fl"></div>
+					<p>售后无忧</p>
+					<a>30天随心退换货服务</a>
+				</div>
+				<div class="introduce">
+				<ul>
+					<li>
+						<p>配镜指南</p>
+						<hr />
+					</li>
+					<li><a href="#" >读懂验光单</a></li>
+					<li><a href="#" >眼镜学堂</a></li>
+					<li><a href="#" >配镜流程</a></li>
+				</ul>
+				</div>
+				</div>
+				
+				<div class="fl label">
+				<div class="label_1">
+					<div class="icon fl"></div>
+					<p>门店体验</p>
+					<a>多家体验门店为您贴心服务</a>
+				</div>
+				<div class="introduce">
+				<ul>
+					<li>
+						<p>支付与配送</p>
+						<hr />
+					</li>
+					<li><a href="#" >支付方式</a></li>
+					<li><a href="#" >配送时效</a></li>
+				</ul>
+				</div>
+				</div>				
+			</div>
+		</div>
+		<div class="footer_bottom">
+			<div class="footer_bottom_a">
+				<p>
+				Copyright © 2019 某科技公司 All Rights Reserved.<a href="#">粤ICP备15082294号-1</a>
+				</p>
+			</div>
+			
+			
+		</div>
+		
+		
+	</body>
+</html>

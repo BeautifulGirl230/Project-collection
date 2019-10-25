@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Web2111</display-name>
+  <welcome-file-list>
+<!--     <welcome-file>login.html</welcome-file> -->
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>SessionTest</servlet-name>
+    <servlet-class>mejshukeji.com.servlet.SessionTest</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MainServlet</servlet-name>
+    <servlet-class>mejshukeji.com.servlet.MainServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginCheckServlet</servlet-name>
+    <servlet-class>mejshukeji.com.servlet.LoginCheckServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>One</servlet-name>
+    <servlet-class>mejshukeji.com.servlet02.One</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Two</servlet-name>
+    <servlet-class>mejshukeji.com.servlet02.Two</servlet-class>
+  </servlet>
+  <filter>
+  	<filter-name>MyFilter</filter-name>
+  	<filter-class>mejshukeji.com.servlet02.MyFilter</filter-class>
+  </filter>
+
+	
+  <filter-mapping>
+  	<filter-name>MyFilter</filter-name>
+<!--  表示，不论客户端发送任何请求，都会经过MyFliter过滤器   -->
+  	<url-pattern>/*</url-pattern>
+  	<!-- 表示请求servlet目录下的页面或servlet，都会经过这个过滤器 -->
+<!-- <url-pattern>/servlet/*</url-pattern> -->
+  </filter-mapping>
+  <servlet-mapping>
+    <servlet-name>SessionTest</servlet-name>
+    <url-pattern>/servlet/SessionTest</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MainServlet</servlet-name>
+    <url-pattern>/servlet/MainServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginCheckServlet</servlet-name>
+    <url-pattern>/servlet/LoginCheckServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>One</servlet-name>
+    <url-pattern>/servlet/One</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Two</servlet-name>
+    <url-pattern>/servlet/Two</url-pattern>
+  </servlet-mapping>
+</web-app>
