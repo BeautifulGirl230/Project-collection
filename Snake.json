@@ -1,0 +1,14 @@
+{
+  ¡°user¡±£º[
+    { ¡° id ¡±£º1£¬¡° title ¡±£º¡° Post 1 ¡± }£¬
+    { ¡° id ¡±£º2£¬¡° title ¡±£º¡° Post 2 ¡± }£¬
+    { ¡° id ¡±£º3£¬¡° title ¡±£º¡° Post 3 ¡± }
+  ]£¬
+  ¡°lunbotu¡±£º[
+    { ¡° id ¡±£º1£¬¡° body ¡±£º¡° some comment ¡±£¬¡° postId ¡±£º1 }£¬
+    { ¡° id ¡±£º2£¬¡° body ¡±£º¡°Ò»Ð©ÆÀÂÛ¡±£¬¡° postId ¡±£º1 }
+  ]£¬
+  ¡°get¡±£º{
+    ¡° name ¡±£º ¡° typicode ¡±
+  }
+}
