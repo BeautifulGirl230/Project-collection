@@ -1,0 +1,30 @@
+.demo-type{
+  width: 100%;
+  height: 600px;
+  background-color:#656b79;
+}
+.login-backgorund{
+  text-align: center;
+}
+.login-title{
+  margin-top: 60px;
+}
+.login{
+  text-align: center;
+  margin-top: 30px;
+  color: #fff;
+}
+.login-username{
+  width: 230px;
+}
+.login-password{
+  width: 230px;
+  margin-top: 20px;
+}
+.login-button{
+  text-align: center;
+  margin-top: 20px;
+}
+.button01{
+  width: 120px;
+}
