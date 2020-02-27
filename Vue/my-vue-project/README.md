@@ -1,16 +1,15 @@
-# my-vue-project
+﻿# my-vue-project
 
-> A Vue.js project
+> Vue.js 服装商城App
 
-## 效果图
-``` bash
-![]
-```
+## 效果
+
 ![image](./jietu/text1.JPG)
 ![image](./jietu/text2.JPG)
 ![image](./jietu/text3.JPG)
 ![image](./jietu/text4.JPG)
 ![image](./jietu/text5.JPG)
+
 ### Build Setup
 ``` bash
 # install dependencies
