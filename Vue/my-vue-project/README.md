@@ -2,8 +2,16 @@
 
 > A Vue.js project
 
-## Build Setup
-
+## 效果图
+``` bash
+![]
+```
+![image](./jietu/text1.JPG)
+![image](./jietu/text2.JPG)
+![image](./jietu/text3.JPG)
+![image](./jietu/text4.JPG)
+![image](./jietu/text5.JPG)
+### Build Setup
 ``` bash
 # install dependencies
 安装依赖
