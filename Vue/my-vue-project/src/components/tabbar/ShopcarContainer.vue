@@ -3,6 +3,7 @@
     <div class="div">
       <div class="background">
         <div class="shoppingche" v-for="(item,number) in list" :key="item.id">
+			<router-link :to="'/Detalis/ClothingDetails/' + item.id">
         <input class="shoppingche-checkbox" type="checkbox" v-model="item.seleced">
         <div class="shoppingche-img">
           <!-- 给图片添加懒加载 v-lazy -->
@@ -23,6 +24,7 @@
             <button class="shoppingche-plus" v-show="flag" type="button" @change="add()" @click="plus(number)">+</button>
           </div>
         </div>
+		</router-link>
         </div>
         <div class="purchase">
           <div class="shoppingche-item">
@@ -164,6 +166,7 @@
           height: 30px;
           margin: 7px 10px 0 20px;
           font-size: 15px;
+		  color: #797979;
           .shoppingche-title-shop{
             color: #5a5a5a;
             margin: 0 0 7px 0;

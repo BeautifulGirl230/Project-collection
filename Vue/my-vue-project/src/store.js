@@ -66,13 +66,14 @@ const store = new Vuex.Store ({
   mutations:{
     $_setToken(state, value) { // 设置存储token
       state.token = value;
-      localStorage.setItem('token', value);
+      localStorage.setItem('token',window.JSON.stringify(state.token));
     },
     $_removeStorage(state, value){  // 删除token
       localStorage.removeItem('token');
     },
     changeUserInfo(state, value){   //value 就是传递的值
       state.userInfo = value;
+      console.log("store:" + state.userInfo)
     },
     Storingpinglun(state,obj){
       state.pinglun.some(item => {

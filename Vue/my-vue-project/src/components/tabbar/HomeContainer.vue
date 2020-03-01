@@ -65,6 +65,7 @@
 <script>
   import  { Toast } from 'mint-ui';
   import axios from 'axios';
+  import qs from 'qs';
   export default {
        data(){
            return{

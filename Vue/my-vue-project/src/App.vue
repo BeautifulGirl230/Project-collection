@@ -25,7 +25,7 @@
       </router-link>
       <router-link class="mui-tab-item" to="/member">
         <span class="mui-icon mui-icon-contact"></span>
-        <span class="mui-tab-label">登录</span>
+        <span class="mui-tab-label">我的</span>
       </router-link>
     </nav>
   </div>

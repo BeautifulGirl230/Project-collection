@@ -3,7 +3,7 @@
     <van-search class="van-search"
                 v-model="keywords"
                 id="search"
-                placeholder="请输入搜索关键词">
+                placeholder="请输入搜索关键词,如:时尚或潮流">
     </van-search>
     <van-pull-refresh class="van-pull-refresh"
                       v-model="isLoading"
@@ -13,17 +13,19 @@
                       @refresh="onRefresh"
     >
     <ul class="mui-table-view" v-for="item in search(keywords)" :key="item.id">
-      <li class="mui-table-view-cell mui-media">
-        <a href="javascript:;">
-          <img class="mui-left" v-lazy="item.img_url">
-          <div class="mui-media-body">
-            <div class="title">{{ item.category }}</div>
-            <p class='mui-ellipsis'>{{ item.title }}</p>
-            <p class='mui-ellipsis'>{{ item.price_item }}</p>
-            <p class='mui-ellipsis slogan'>{{ item.slogan }}</p>
-          </div>
-        </a>
-      </li>
+		<router-link :to="'/Detalis/ClothingDetails/' + item.id">
+		  <li class="mui-table-view-cell mui-media">
+			<a href="javascript:;">
+			  <img class="mui-left" v-lazy="item.img_url">
+			  <div class="mui-media-body">
+				<div class="title">{{ item.category }}</div>
+				<p class='mui-ellipsis'>{{ item.title }}</p>
+				<p class='mui-ellipsis'>{{ item.price_item }}</p>
+				<p class='mui-ellipsis slogan'>{{ item.slogan }}</p>
+			  </div>
+			</a>
+		  </li>
+	  </router-link>
     </ul>
     </van-pull-refresh>
   </div>

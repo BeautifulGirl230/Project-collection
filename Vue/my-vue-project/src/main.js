@@ -48,23 +48,36 @@ Vue.use(Lazyload,{
 import qs from 'qs'     //npm install qs
 import Axios from 'axios'   //引入axios  npm install axios --save
 Vue.prototype.$axios = Axios;
-Vue.prototype.HOST = '/api';
+// Vue.prototype.HOST = '/api';
 Axios.defaults.baseURL = '/api';  // 改成/api才能用proxyTable跨域
 global.axios = Axios;  //设置一个全局axios便于调用
 Axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
-
+import {Toast} from 'mint-ui'
+// 全局路由构造函数，判断是否登录和要跳转到页面
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(res => res.meta.title)) {    // 需要登录
+    if(window.localStorage.token){
+      next()
+    } else {
+          next({path: '/login'});
+          Toast({ message: '检测到您还未登录,请登录后操作！' + '请您输入账号:Snake,密码:123456', duration: 5500 });
+      }
+    } else {
+      next()
+    }
+});
 // // 添加请求拦截器
 Axios.interceptors.request.use(function (config) {
   // 在发送请求之前做些什么
-  if (config.method === "post" && store.state.token){
-    config.data = qs.stringify(config.data);
-    config.headers.common['token'] =store.state.token
-
-  }
-  return config;
+  if(store.state.token){
+        config.headers.common['token'] =store.state.token
+      }
+      return config;
 }, function (error) {
   // 对请求错误做些什么
+  router.push("/login");
+  Toast({ message: '检测到您还未登录,请登录后操作！' + '请输入:账号:Snake,密码:123456', duration: 5500 });
   return Promise.reject(error);
 });
 // 添加响应拦截器
@@ -78,16 +91,16 @@ Axios.interceptors.response.use(function (response) {
   return response;
 }, function (error) {
   // 对响应错误做点什么
-  if(error.response) {
-    switch (error.response.status) {
-      case 401:
-        localStorage.removeItem('token');
-        router.replace({
-          path: '/shopcar',
-          query: {redirect: router.currentRoute.fullPath}//登录成功后跳入浏览的当前页面
-        });
-    }
-  }
+   if(error.response){
+        switch(error.response.status){
+          case 401:
+            localStorage.removeItem('token');
+            router.replace({
+              path: '/home',
+              query: {redirect: router.currentRoute.fullPath}//登录成功后跳入浏览的当前页面
+            })
+          }
+        }
   return Promise.reject(error);
 });
 

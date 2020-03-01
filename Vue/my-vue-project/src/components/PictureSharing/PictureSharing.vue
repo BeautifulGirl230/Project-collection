@@ -22,16 +22,20 @@
     <mt-tab-container class="mint-tab-container" v-model="selected">
       <mt-tab-container-item id="1">
         <div class="mint-tab-container-img" v-for="item in list" :key="item.id">
-          <img v-lazy="item.img" alt="">
-          <div class="mint-tab-container-title"></div>
-          <div class="mint-tab-container-size">{{ item.text }}</div>
+			<router-link :to="'/Detalis/ClothingDetails/' + item.id">
+			  <img v-lazy="item.img" alt="">
+			  <div class="mint-tab-container-title"></div>
+			  <div class="mint-tab-container-size">{{ item.text }}</div>
+			</router-link>
         </div>
       </mt-tab-container-item>
       <mt-tab-container-item id="2">
         <div class="mint-tab-container-img" v-for="item in souper" :key="item.id">
-          <img v-lazy="item.img" alt="">
-          <div class="mint-tab-container-title"></div>
-          <div class="mint-tab-container-size">{{ item.text }}</div>
+          <router-link :to="'/Detalis/ClothingDetails/' + item.id">
+			<img v-lazy="item.img" alt="">
+			<div class="mint-tab-container-title"></div>
+			<div class="mint-tab-container-size">{{ item.text }}</div>
+			</router-link>
         </div>
       </mt-tab-container-item>
     </mt-tab-container>

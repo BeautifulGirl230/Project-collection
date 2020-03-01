@@ -1,8 +1,8 @@
 {
   "status" : 0,
   "loginForm":{
-    "username": ["123","Snake"],
-    "password": ["123","123456"]
+    "username": "Snake",
+    "password": "123456"
   },
   "message" :   [
     {
