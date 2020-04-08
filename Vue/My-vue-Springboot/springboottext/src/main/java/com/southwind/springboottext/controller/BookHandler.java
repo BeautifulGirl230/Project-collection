@@ -7,14 +7,13 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/book")
 public class BookHandler {
 
     @Autowired
     private BookRepository bookRepository;
+
 
     //查询 设置传递数据
     @GetMapping("/findAll/{page}/{size}")     //设置get请求

@@ -9,6 +9,21 @@
     <el-form-item label="作者" prop="author">
       <el-input v-model="ruleForm.author"></el-input>
     </el-form-item>
+    <el-form-item label="出版社" prop="publish">
+      <el-input v-model="ruleForm.publish"></el-input>
+    </el-form-item>
+    <el-form-item label="页数" prop="pages">
+      <el-input v-model="ruleForm.pages"></el-input>
+    </el-form-item>
+    <el-form-item label="价格" prop="price">
+      <el-input v-model="ruleForm.price"></el-input>
+    </el-form-item>
+    <el-form-item label="类型" prop="bookcaseid">
+      <el-input v-model="ruleForm.bookcaseid"></el-input>
+    </el-form-item>
+    <el-form-item label="数量" prop="abled">
+      <el-input v-model="ruleForm.abled"></el-input>
+    </el-form-item>
     <el-form-item>
       <el-button type="primary" @click="submitForm('ruleForm')">修改</el-button>
       <el-button @click="resetForm('ruleForm')">重置</el-button>
@@ -23,32 +38,56 @@
                 id: this.$route.query.id,
                 ruleForm: {
                     id: this.id,
-                    name: '123',
-                    author: '123',
+                    name: '',
+                    author: '',
+                    publish:'',
+                    pages:'',
+                    price:'',
+                    bookcaseid:'',
+                    abled:'',
                 },
                 rules: {
                     name: [
                         { required: true, message: '图书名称不能为空！', trigger: 'blur' },
                     ],
                     author: [
-                        { required: true, message: '作者不能为空！', trigger: 'blur' }
+                        { required: true, message: '作者不能为空！', trigger: 'blur' },
+                    ],
+                    publish: [
+                        { required: true, message: '出版社不能为空！', trigger: 'blur' },
+                    ],
+                    pages: [
+                        { required: true, message: '页数不能为空！', trigger: 'blur' },
+                    ],
+                    price: [
+                        { required: true, message: '价格不能为空！', trigger: 'blur' },
+                    ],
+                    bookcaseid: [
+                        { required: true, message: '类型不能为空！', trigger: 'blur' },
+                    ],
+                    abled: [
+                        { required: true, message: '数量不能为空！', trigger: 'blur' },
                     ],
                 }
             };
         },
-        created() {
+        async created() {
             const _this = this;
-            axios.get('http://localhost:8181/book/findById/'+this.id).then(function(resp){
-                _this.ruleForm = resp.data
-            })
+            let data = await axios.personal.findById(this.id);
+            console.log("开始赋值!");
+            _this.ruleForm = data;
+            console.log("赋值完成！");
+            console.log(this.ruleForm);
+            return data
         },
         methods: {
-            submitForm(formName) {
+             submitForm(formName) {
                 const _this = this;
                 this.$refs[formName].validate((valid) => {
                     if (valid) {
-                        axios.put('http://localhost:8181/book/update/',this.ruleForm).then(res => {
-                            if (res.data === 'success'){
+                        axios.personal.phone(this.ruleForm).then(res => {
+                            if (res === 'success'){
+                                console.log('res:'+res);
                                 console.log(this.ruleForm);
                                 _this.$alert( '修改成功：《' + this.ruleForm.name + '》', '消息',{
                                     confirmButtonText:'确认',
@@ -79,6 +118,6 @@
   @rem:10rem;
   .el-form{
     width: 5rem;
-    margin: 2rem auto;
+    margin: 1rem auto;
   }
 </style>

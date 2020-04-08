@@ -12,13 +12,18 @@ npm install element-ui --save
 <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 <!-- 引入组件库 -->
 <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
 # 安装less-loader less node-less style-loader
 npm install less-loader@7.3.1 --save-dev
 npm install node-less --save-dev
 npm install less --save-dev
 npm install style-loader --save-dev
+
 # 安装组件懒加载 Vue Lazy Component
 npm install @xunlei/vue-lazy-component
+
+# 拖拽列表
+npm install --save vuedraggable
 ```
 
 ### Build Setup

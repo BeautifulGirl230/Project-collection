@@ -14,6 +14,7 @@ class SpringboottextApplicationTests {
 	@Autowired
 	private BookRepository repository;
 
+
 	@Test
 	void contextLoads() {
 		PageRequest pageRequest = PageRequest.of(0,6);
@@ -50,4 +51,14 @@ class SpringboottextApplicationTests {
 	void  delete(){
 		repository.deleteById(18);
 	}
+
+//	@Test
+//	void login(){
+//		Login login = new Login();
+//		login.setId(4);
+//		login.setUsername("user");
+//		login.setPassword("123");
+//		Login login1 = loginRepository.save(login);
+//		System.out.println(login1);
+//	}
 }
